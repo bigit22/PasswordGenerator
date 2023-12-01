@@ -1,10 +1,12 @@
 from django.shortcuts import render
+from .models import Post
 import random
 # Create your views here.
 
 
 def home(request):
-    return render(request, 'generator/home.html')
+    posts = Post.objects.all()
+    return render(request, 'generator/home.html', {'posts': posts})
 
 
 def about(request):

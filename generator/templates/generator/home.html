@@ -1,43 +1,2089 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>PasswordGenerator</title>
+
+
+    <style>
+    .black_overlay{
+        display: none;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index:1001;
+        -moz-opacity: 0.8;
+        opacity:.80;
+        filter: alpha(opacity=80);
+    }
+    .white_content {
+        display: none;
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        width: 450px;
+        height: 400px;
+        padding: 16px;
+        border: 16px solid orange;
+        background-color: white;
+        z-index:1002;
+        overflow: auto;
+    }
+</style>
 </head>
+ 
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" href="sddm.css" >
+<link rel="shortcut icon" href="images/smileyx.png" type="image/x-icon">
+
+
+<title>INNOVATE See & Count</title>
+<script src="jquery.js" type="text/javascript"></script>
+<script src="jquery.alerts.js" type="text/javascript"></script>
+<link href="jquery.alerts.css" rel="stylesheet" type="text/css" media="screen" />
+
+<style type="text/css">
+<!--
+.style1p {color: #000}
+body {
+	margin-top: 0px;
+}
+-->
+</style>
+</head>
+
+<Script Language=JavaScript>
+
+function callAlert(val)
+{
+		jConfirm('Are you sure? Please answer', 'My Smiley Online Training', function(r) {
+			if(r==true){
+				if(val==1)document.form1.submit();
+				else if(val==2)document.form2.submit();
+				else if(val==3)document.form3.submit();
+				else if(val==4)document.form4.submit();
+				else if(val==5)document.form5.submit();
+				else if(val==6)document.form6.submit();
+				else if(val==7)document.form7.submit();
+				else if(val==8)document.form8.submit();
+				else if(val==9)document.form9.submit();
+				else if(val==10)document.form10.submit();
+				else if(val==11)document.form11.submit();
+				else if(val==12)document.form12.submit();
+				else if(val==13)document.form13.submit();
+				else if(val==14)document.form14.submit();
+				else if(val==15)document.form15.submit();
+				else if(val==16)document.form16.submit();
+				else if(val==17)document.form17.submit();
+				else if(val==18)document.form18.submit();
+				else if(val==19)document.form19.submit();
+				else if(val==20)document.form20.submit();
+
+			}
+
+		});
+
+}
+
+
+</Script>
+
 <body>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ <style type="text/css">
+<!--
+.style1 {color: #FFFFFF}
+.style6 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+.style8 {
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+a:link {
+text-shadow: 1px 1px 1px #dededd;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+a:hover {
+	text-decoration: underline;
+	color: #FFFFFF;
+}
+a:active {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+-->
+</style>
+<script type="text/javascript" src="js/dropdown.js"></script>
 
-<div class="container text-center">
-    <h1>Password Generator</h1>
+<style type="text/css">
 
-    <form action="{% url 'password' %}">
-        <select name="length">
-            <option value="6"> 6 </option>
-            <option value="7"> 7 </option>
-            <option value="8"> 8 </option>
-            <option value="9"> 9 </option>
-            <option value="10"> 10 </option>
-            <option value="11"> 11 </option>
-            <option value="12" selected="selected"> 12 </option>
-            <option value="13"> 13 </option>
-            <option value="14"> 14 </option>
-            <option value="15"> 15 </option>
-            <option value="16"> 16 </option>
-            <option value="17"> 17 </option>
-            <option value="18"> 18 </option>
-        </select> Length
-        <br>
-            <input type="checkbox" name="uppercase">Uppercase
-        <br>
-            <input type="checkbox" name="numbers">Numbers
-        <br>
-            <input type="checkbox" name="special">Special
-        <br>
-        <br>
-            <input type="submit" value="Generate Password" class="btn btn-primary">
-    </form>
-    <br>
-    <a href="{% url 'about' %}" class="btn btn-primary">about page</a>
-</div>
+body { font-size: 0.7em; }
+h3   { font-size: 1.6em; margin: 0px; }
+
+a.sample_attach, a.sample_attach:visited, div.sample_attach
+{
+  display: block;
+  width:   200px;
+
+  border:  1px solid black;
+  padding: 2px 5px;
+
+  background: #FFFFEE;
+
+  text-decoration: none;
+  font-family: Verdana, Sans-Sherif;
+  font-weight: 900;
+  font-size: 1.0em;
+  color:   #008000;
+}
+
+a.sample_attach, a.sample_attach:visited { border-bottom: none; }
+div#sample_attach_menu_child             { border-bottom: 1px solid black; }
+
+form.sample_attach
+{
+  position: absolute;
+  visibility: hidden;
+
+  border:  1px solid black;
+  padding: 0px 5px 2px 5px;
+
+  background: #FFFFEE;
+}
+
+form.sample_attach b
+{
+  font-family: Verdana, Sans-Sherif;
+  font-weight: 900;
+  font-size: 1.1em;
+}
+
+input.sample_attach { margin: 1px 0px; width: 170px; }
+
+</style>
+
+
+<!--<table width="950" height="150" border="0" align="center" cellpadding="0" cellspacing="0" background="images/header_new.jpg" style="background-repeat:no-repeat; margin-top:1%">-->
+
+<table width="950" height="150" border="0" align="center" cellpadding="0" cellspacing="0" background="images/header_new.jpg " style="background-repeat:no-repeat; margin-top:1%">
+
+
+  <tr>
+    <td valign="top"><table width="950" height="149"  border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="111" colspan="2"><a href="main.php"><img src="images/trans.png" width="356" height="79" border="0"></a></td>
+        
+		
+		
+		<!--<td width="14%"><a href="chat_terms.php" target="_blank"><img src="images/chat_with_teacher_newicon.png" alt="" width="85" height="64" border="0" /></a><span style="text-align: right"></span></td>
+			
+		 Another way is that create another column in student db (onlinechat_enable) then in internal have radio button. Attach the $_SESSION["onlinechat_enable"] = $myrow["onlinechat_enable"] at login.php of online_practice.	-->
+			
+		<td width="14%">
+		
+	 <!--REMOVE THIS COMMENT LINE BELOW, swap ' chat_with_teacher_newicon.png ' with below to start using -->
+		
+			
+		</td>	
+						
+		
+		
+        <td width="12%"><div align="right"><a href="logout.php"><img src="images/trans.png" width="100" height="79" border="0"></a></div></td>
+        </tr>
+      <tr>
+        <td width="8%">&nbsp;</td>
+        <td colspan="3"><table width="700" border="0" align="right" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="95"><div align="left" class="style1 style6"><a href="op_main.php">See &amp; Count </a></div></td>
+            <td width="11"><img src="images/seperator.jpg" width="13" height="27"></td>
+            <td width="142"><div align="center" class="style1 style6"><a href="op_audio.php">Listen &amp; Count </a></div></td>
+            <td width="11"><img src="images/seperator.jpg" width="13" height="27"></td>
+            <td width="157"><div align="center" class="style1 style6"><a href="op_competition.php">Online Competition</a></div></td>
+            <td width="11"><img src="images/seperator.jpg" width="13" height="27"></td>
+            <td width="95"><div align="center"><a href="op_resources.php"><span class="style8">Resources</span></a></div></td>
+            <td width="30"><img src="images/seperator.jpg" width="13" height="27"> </td>
+            <td width="165" class="style8"><div id="sample_attach_menu_parent" class="">Share with others </div>
+			<div id="sample_attach_menu_child">
+			<a class="sample_attach" href="op_share.php">Live Chat</a>
+			<a class="sample_attach" href="op_share_offline.php">Offline Message</a>
+			
+			</div>
+			<script type="text/javascript">
+at_attach("sample_attach_menu_parent", "sample_attach_menu_child", "hover", "y", "pointer");
+</script>
+			</td>
+          </tr>
+        </table></td>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+
+
+<table width="950" border="0" align="center" cellpadding="0" cellspacing="0"  bgcolor="#f2f2f2">
+  <tr>&nbsp;&nbsp;</tr>
+  <tr>
+    <td width="1000" height="47" align="center" class="TextH4"><p style="outline-style:solid; padding:2%; outline-color:#FF3300; outline-width:medium">My Smiley Online Training</p></td>
+  </tr>
+  <tr>
+    <td valign="top" class="TextH1">
+   
+      <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>&nbsp;&nbsp;</tr>
+		<tr>
+          <td>Ranking Records: <a href="ranking_daily.php" target="_blank"><img src="images/day.jpg" alt="Daily" width="30" height="30" border="0" align="absmiddle" /></a> <a href="ranking_daily.php" target="_parent"><font color="f99b13">Today</font></a> | <a href="ranking_daily.php?year=2023&month=11&day=30" target="_parent"><font color="f99b13">Yesterday</font>&nbsp;</a>  <a href="ranking_monthly.php?year=2023&month=11" target="_blank"><img src="images/month.jpg" alt="Monthly" width="25" border="0" align="absmiddle" /></a> <a href="ranking_monthly.php" target="_parent"><font color="f99b13">This Month</font></a> | <a href="ranking_monthly.php?year=2023&amp;month=11" target="_parent"><font color="f99b13">Last Month</font></a></td>
+        </tr>
+      </table>
+      <br />
+      
+      <table width="100%" border="0" cellspacing="2" cellpadding="2">
+       <tr>
+         <td width="100%" height="600" valign="top"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+           <tr>
+             <td bgcolor="#818181"><table width="100%" border="0" align="center" cellpadding="1" cellspacing="1" bgcolor="">
+               <tr>
+                 <td width="16%" height="20" align="center" bgcolor="#FFCC33"><span title="Click for alternate translations">Type</span></td>
+                 <td width="6%" height="20" align="center" bgcolor="#FFCC33">Item </td>
+                 <td width="14%" height="20" align="center" bgcolor="#FFCC33"><span title="Click for alternate translations">Unit</span></td>
+                 <td width="26%" align="center" bgcolor="#FFCC33">Skill</td>
+                 <td width="38%" align="center" bgcolor="#FFCC33">Category</td>
+                 </tr>
+               <tr>
+                 <td rowspan="7" align="center" bgcolor="#F2F2F2" style="color:#FF6600"><img src="images/graph_symbol-preview.png" alt="graph_sign" width="54" height="59" /><br />
+                   <br />
+<strong>Progressive (Mental Arithmetic)</strong></td>
+                 <td align="center" bgcolor="#F2F2F2">1</td>
+                 <td align="center" bgcolor="#F2F2F2">15 Questions </td>
+                 <td align="center" bgcolor="#F2F2F2">Imaging</td>
+                 <td align="right" bgcolor="#F2F2F2"><form name="form1" action="op_exam_img.php?no=15&item=1" method="post">
+                   <select name="ques">
+                     <option value='PRO_IMG_1' selected="selected">1 Digit </option>
+                     <option value='PRO_IMG_2'>2 Digits </option>
+                     <option value='PRO_IMG_3'>3 Digits </option>
+                     <option value='PRO_IMGNUM_1'>1 Digit ( Images + Number )</option>
+                     <option value='PRO_IMGNUM_2'>2 Digits ( Images + Number )</option>
+                     <option value='PRO_NUMIMG_1'>1 Digit ( Number + Images )</option>
+                     <option value='PRO_NUMIMG_2'>2 Digits ( Number + Images )</option>
+                     <option value='PRO_NUMNUM_1'>1 Digit ( Number + Number )</option>
+                     <option value='PRO_NUMNUM_2'>2 Digits ( Number+ Number )</option>
+                   </select>
+                   <input style="background-color:#ffae19; outline-style:solid; outline-color:#FF3300; outline-width:thick"  name="BtnLogin8" type="button"  value="START" onclick="callAlert('1')"/>
+                 </form></td>
+                 </tr>
+               <tr>
+                 <td align="center" bgcolor="#F2F2F2">2</td>
+                 <td align="center" bgcolor="#F2F2F2">10 Questions</td>
+                 <td align="center" bgcolor="#F2F2F2">Addition, Subtraction +, -</td>
+                 <td align="right" valign="middle" bgcolor="#F2F2F2">   <form name="form2" action="op_exam_v.php?no=10&item=2" method="post">
+                   <select name="ques" id="ques" style="width:200px" >
+                     <option value='ADV_PS_1+-2' selected="selected">1 Digit 2 Rows</option>
+                     <option value='ADV_PS_1+-3'>1 Digit 3 Rows</option>
+                     <option value='ADV_PS_1+-4'>1 Digit 4 Rows</option>
+                     <option value='ADV_PS_1+-5'>1 Digit 5 Rows</option>
+                     <option value='ADV_PS_1+-6'>1 Digit 6 Rows</option>
+                     <option value='ADV_PS_1+-7'>1 Digit 7 Rows</option>
+                     <option value='ADV_PS_1+-8'>1 Digit 8 Rows</option>
+                     <option value='ADV_PS_1+-9'>1 Digit 9 Rows</option>
+                     <option value='ADV_PS_1+-10'>1 Digit 10 Rows</option>
+                     <option value='ADV_PS_2+-2'>2 Digits 2 Rows</option>
+                     <option value='ADV_PS_2+-3'>2 Digits 3 Rows</option>
+                     <option value='ADV_PS_2+-4'>2 Digits 4 Rows</option>
+                     <option value='ADV_PS_2+-5'>2 Digits 5 Rows</option>
+                     <option value='ADV_PS_2+-6'>2 Digits 6 Rows</option>
+                     <option value='ADV_PS_2+-7'>2 Digits 7 Rows</option>
+                     <option value='ADV_PS_2+-8'>2 Digits 8 Rows</option>
+                     <option value='ADV_PS_2+-9'>2 Digits 9 Rows</option>
+                     <option value='ADV_PS_2+-10'>2 Digits 10 Rows</option>
+                     <option value='ADV_PS_3+-2'>3 Digits 2 Rows</option>
+                     <option value='ADV_PS_3+-3'>3 Digits 3 Rows</option>
+                     <option value='ADV_PS_3+-4'>3 Digits 4 Rows</option>
+                     <option value='ADV_PS_3+-5'>3 Digits 5 Rows</option>
+                     <option value='ADV_PS_3+-6'>3 Digits 6 Rows</option>
+                     <option value='ADV_PS_3+-7'>3 Digits 7 Rows</option>
+                     <option value='ADV_PS_3+-8'>3 Digits 8 Rows</option>
+                     <option value='ADV_PS_3+-9'>3 Digits 9 Rows</option>
+                     <option value='ADV_PS_3+-10'>3 Digits 10 Rows</option>
+                     <option value='ADV_PS_4+-2'>4 Digits 2 Rows</option>
+                     <option value='ADV_PS_4+-3'>4 Digits 3 Rows</option>
+                     <option value='ADV_PS_4+-4'>4 Digits 4 Rows</option>
+                     <option value='ADV_PS_4+-5'>4 Digits 5 Rows</option>
+                     <option value='ADV_PS_4+-6'>4 Digits 6 Rows</option>
+                     <option value='ADV_PS_4+-7'>4 Digits 7 Rows</option>
+                     <option value='ADV_PS_4+-8'>4 Digits 8 Rows</option>
+                     <option value='ADV_PS_4+-9'>4 Digits 9 Rows</option>
+                     <option value='ADV_PS_4+-10'>4 Digits 10 Rows</option>
+                     <option value='ADV_PS_5+-2'>5 Digits 2 Rows</option>
+                     <option value='ADV_PS_5+-3'>5 Digits 3 Rows</option>
+                     <option value='ADV_PS_5+-4'>5 Digits 4 Rows</option>
+                     <option value='ADV_PS_5+-5'>5 Digits 5 Rows</option>
+                     <option value='ADV_PS_5+-6'>5 Digits 6 Rows</option>
+                     <option value='ADV_PS_5+-7'>5 Digits 7 Rows</option>
+                     <option value='ADV_PS_5+-8'>5 Digits 8 Rows</option>
+                     <option value='ADV_PS_5+-9'>5 Digits 9 Rows</option>
+                     <option value='ADV_PS_5+-10'>5 Digits 10 Rows</option>
+                     <option value='ADV_PS_6+-2'>6 Digits 2 Rows</option>
+                     <option value='ADV_PS_6+-3'>6 Digits 3 Rows</option>
+                     <option value='ADV_PS_6+-4'>6 Digits 4 Rows</option>
+                     <option value='ADV_PS_6+-5'>6 Digits 5 Rows</option>
+                     <option value='ADV_PS_6+-6'>6 Digits 6 Rows</option>
+                     <option value='ADV_PS_6+-7'>6 Digits 7 Rows</option>
+                     <option value='ADV_PS_6+-8'>6 Digits 8 Rows</option>
+                     <option value='ADV_PS_6+-9'>6 Digits 9 Rows</option>
+                     <option value='ADV_PS_6+-10'>6 Digits 10 Rows</option>
+                    <!-- 
+ <option value='ADV_PS_7+-2'>7 Digits 2 Rows</option>
+                     <option value='ADV_PS_7+-3'>7 Digits 3 Rows</option>
+                     <option value='ADV_PS_7+-4'>7 Digits 4 Rows</option>
+                     <option value='ADV_PS_7+-5'>7 Digits 5 Rows</option>
+                     <option value='ADV_PS_7+-6'>7 Digits 6 Rows</option>
+                     <option value='ADV_PS_7+-7'>7 Digits 7 Rows</option>
+                     <option value='ADV_PS_7+-8'>7 Digits 8 Rows</option>
+                     <option value='ADV_PS_7+-9'>7 Digits 9 Rows</option>
+                     <option value='ADV_PS_7+-10'>7 Digits 10 Rows</option>
+                     <option value='ADV_PS_8+-2'>8 Digits 2 Rows</option>
+                     <option value='ADV_PS_8+-3'>8 Digits 3 Rows</option>
+                     <option value='ADV_PS_8+-4'>8 Digits 4 Rows</option>
+                     <option value='ADV_PS_8+-5'>8 Digits 5 Rows</option>
+                     <option value='ADV_PS_8+-6'>8 Digits 6 Rows</option>
+                     <option value='ADV_PS_8+-7'>8 Digits 7 Rows</option>
+                     <option value='ADV_PS_8+-8'>8 Digits 8 Rows</option>
+                     <option value='ADV_PS_8+-9'>8 Digits 9 Rows</option>
+                     <option value='ADV_PS_8+-10'>8 Digits 10 Rows</option>
+                     <option value='ADV_PS_9+-2'>9 Digits 2 Rows</option>
+                     <option value='ADV_PS_9+-3'>9 Digits 3 Rows</option>
+                     <option value='ADV_PS_9+-4'>9 Digits 4 Rows</option>
+                     <option value='ADV_PS_9+-5'>9 Digits 5 Rows</option>
+                     <option value='ADV_PS_9+-6'>9 Digits 6 Rows</option>
+                     <option value='ADV_PS_9+-7'>9 Digits 7 Rows</option>
+                     <option value='ADV_PS_9+-8'>9 Digits 8 Rows</option>
+                     <option value='ADV_PS_9+-9'>9 Digits 9 Rows</option>
+                     <option value='ADV_PS_9+-10'>9 Digits 10 Rows</option>
+                     <option value='ADV_PS_10+-2'>10 Digits 2 Rows</option>
+                     <option value='ADV_PS_10+-3'>10 Digits 3 Rows</option>
+                     <option value='ADV_PS_10+-4'>10 Digits 4 Rows</option>
+                     <option value='ADV_PS_10+-5'>10 Digits 5 Rows</option>
+                     <option value='ADV_PS_10+-6'>10 Digits 6 Rows</option>
+                     <option value='ADV_PS_10+-7'>10 Digits 7 Rows</option>
+                     <option value='ADV_PS_10+-8'>10 Digits 8 Rows</option>
+                     <option value='ADV_PS_10+-9'>10 Digits 9 Rows</option>
+                     <option value='ADV_PS_10+-10'>10 Digits 10 Rows</option>
+-->
+                     </select> <input style="background-color:#ffd699; outline-style:solid; outline-color:#FF3300; outline-width:thick" name="BtnLogin" type="button" id="BtnLogin" value="START" onclick="callAlert('2')"/>                  </form></td>
+               </tr>
+               <tr>
+                 <td align="center" bgcolor="#F2F2F2">3</td>
+                 <td align="center" bgcolor="#F2F2F2">30 Questions</td>
+                 <td align="center" bgcolor="#F2F2F2">Addition,  Subtraction +, -</td>
+                 <td align="right" bgcolor="#F2F2F2">  
+                   
+                 <form name="form3" action="op_exam_v.php?type=[|]&no=30&item=3" method="post">
+                   <select name="ques" id="ques" style="width:200px" >
+                     <option value='ADV_PS_1+-2' selected="selected">1 Digit 2 Rows</option>
+                     <option value='ADV_PS_1+-3'>1 Digit 3 Rows</option>
+                     <option value='ADV_PS_1+-4'>1 Digit 4 Rows</option>
+                     <option value='ADV_PS_1+-5'>1 Digit 5 Rows</option>
+                     <option value='ADV_PS_1+-6'>1 Digit 6 Rows</option>
+                     <option value='ADV_PS_1+-7'>1 Digit 7 Rows</option>
+                     <option value='ADV_PS_1+-8'>1 Digit 8 Rows</option>
+                     <option value='ADV_PS_1+-9'>1 Digit 9 Rows</option>
+                     <option value='ADV_PS_1+-10'>1 Digit 10 Rows</option>
+                     <option value='ADV_PS_2+-2'>2 Digits 2 Rows</option>
+                     <option value='ADV_PS_2+-3'>2 Digits 3 Rows</option>
+                     <option value='ADV_PS_2+-4'>2 Digits 4 Rows</option>
+                     <option value='ADV_PS_2+-5'>2 Digits 5 Rows</option>
+                     <option value='ADV_PS_2+-6'>2 Digits 6 Rows</option>
+                     <option value='ADV_PS_2+-7'>2 Digits 7 Rows</option>
+                     <option value='ADV_PS_2+-8'>2 Digits 8 Rows</option>
+                     <option value='ADV_PS_2+-9'>2 Digits 9 Rows</option>
+                     <option value='ADV_PS_2+-10'>2 Digits 10 Rows</option>
+                     <option value='ADV_PS_3+-2'>3 Digits 2 Rows</option>
+                     <option value='ADV_PS_3+-3'>3 Digits 3 Rows</option>
+                     <option value='ADV_PS_3+-4'>3 Digits 4 Rows</option>
+                     <option value='ADV_PS_3+-5'>3 Digits 5 Rows</option>
+                     <option value='ADV_PS_3+-6'>3 Digits 6 Rows</option>
+                     <option value='ADV_PS_3+-7'>3 Digits 7 Rows</option>
+                     <option value='ADV_PS_3+-8'>3 Digits 8 Rows</option>
+                     <option value='ADV_PS_3+-9'>3 Digits 9 Rows</option>
+                     <option value='ADV_PS_3+-10'>3 Digits 10 Rows</option>
+                     <option value='ADV_PS_4+-2'>4 Digits 2 Rows</option>
+                     <option value='ADV_PS_4+-3'>4 Digits 3 Rows</option>
+                     <option value='ADV_PS_4+-4'>4 Digits 4 Rows</option>
+                     <option value='ADV_PS_4+-5'>4 Digits 5 Rows</option>
+                     <option value='ADV_PS_4+-6'>4 Digits 6 Rows</option>
+                     <option value='ADV_PS_4+-7'>4 Digits 7 Rows</option>
+                     <option value='ADV_PS_4+-8'>4 Digits 8 Rows</option>
+                     <option value='ADV_PS_4+-9'>4 Digits 9 Rows</option>
+                     <option value='ADV_PS_4+-10'>4 Digits 10 Rows</option>
+                     <option value='ADV_PS_5+-2'>5 Digits 2 Rows</option>
+                     <option value='ADV_PS_5+-3'>5 Digits 3 Rows</option>
+                     <option value='ADV_PS_5+-4'>5 Digits 4 Rows</option>
+                     <option value='ADV_PS_5+-5'>5 Digits 5 Rows</option>
+                     <option value='ADV_PS_5+-6'>5 Digits 6 Rows</option>
+                     <option value='ADV_PS_5+-7'>5 Digits 7 Rows</option>
+                     <option value='ADV_PS_5+-8'>5 Digits 8 Rows</option>
+                     <option value='ADV_PS_5+-9'>5 Digits 9 Rows</option>
+                     <option value='ADV_PS_5+-10'>5 Digits 10 Rows</option>
+                     <option value='ADV_PS_6+-2'>6 Digits 2 Rows</option>
+                     <option value='ADV_PS_6+-3'>6 Digits 3 Rows</option>
+                     <option value='ADV_PS_6+-4'>6 Digits 4 Rows</option>
+                     <option value='ADV_PS_6+-5'>6 Digits 5 Rows</option>
+                     <option value='ADV_PS_6+-6'>6 Digits 6 Rows</option>
+                     <option value='ADV_PS_6+-7'>6 Digits 7 Rows</option>
+                     <option value='ADV_PS_6+-8'>6 Digits 8 Rows</option>
+                     <option value='ADV_PS_6+-9'>6 Digits 9 Rows</option>
+                     <option value='ADV_PS_6+-10'>6 Digits 10 Rows</option>
+                    <!-- 
+ <option value='ADV_PS_7+-2'>7 Digits 2 Rows</option>
+                     <option value='ADV_PS_7+-3'>7 Digits 3 Rows</option>
+                     <option value='ADV_PS_7+-4'>7 Digits 4 Rows</option>
+                     <option value='ADV_PS_7+-5'>7 Digits 5 Rows</option>
+                     <option value='ADV_PS_7+-6'>7 Digits 6 Rows</option>
+                     <option value='ADV_PS_7+-7'>7 Digits 7 Rows</option>
+                     <option value='ADV_PS_7+-8'>7 Digits 8 Rows</option>
+                     <option value='ADV_PS_7+-9'>7 Digits 9 Rows</option>
+                     <option value='ADV_PS_7+-10'>7 Digits 10 Rows</option>
+                     <option value='ADV_PS_8+-2'>8 Digits 2 Rows</option>
+                     <option value='ADV_PS_8+-3'>8 Digits 3 Rows</option>
+                     <option value='ADV_PS_8+-4'>8 Digits 4 Rows</option>
+                     <option value='ADV_PS_8+-5'>8 Digits 5 Rows</option>
+                     <option value='ADV_PS_8+-6'>8 Digits 6 Rows</option>
+                     <option value='ADV_PS_8+-7'>8 Digits 7 Rows</option>
+                     <option value='ADV_PS_8+-8'>8 Digits 8 Rows</option>
+                     <option value='ADV_PS_8+-9'>8 Digits 9 Rows</option>
+                     <option value='ADV_PS_8+-10'>8 Digits 10 Rows</option>
+                     <option value='ADV_PS_9+-2'>9 Digits 2 Rows</option>
+                     <option value='ADV_PS_9+-3'>9 Digits 3 Rows</option>
+                     <option value='ADV_PS_9+-4'>9 Digits 4 Rows</option>
+                     <option value='ADV_PS_9+-5'>9 Digits 5 Rows</option>
+                     <option value='ADV_PS_9+-6'>9 Digits 6 Rows</option>
+                     <option value='ADV_PS_9+-7'>9 Digits 7 Rows</option>
+                     <option value='ADV_PS_9+-8'>9 Digits 8 Rows</option>
+                     <option value='ADV_PS_9+-9'>9 Digits 9 Rows</option>
+                     <option value='ADV_PS_9+-10'>9 Digits 10 Rows</option>
+                     <option value='ADV_PS_10+-2'>10 Digits 2 Rows</option>
+                     <option value='ADV_PS_10+-3'>10 Digits 3 Rows</option>
+                     <option value='ADV_PS_10+-4'>10 Digits 4 Rows</option>
+                     <option value='ADV_PS_10+-5'>10 Digits 5 Rows</option>
+                     <option value='ADV_PS_10+-6'>10 Digits 6 Rows</option>
+                     <option value='ADV_PS_10+-7'>10 Digits 7 Rows</option>
+                     <option value='ADV_PS_10+-8'>10 Digits 8 Rows</option>
+                     <option value='ADV_PS_10+-9'>10 Digits 9 Rows</option>
+                     <option value='ADV_PS_10+-10'>10 Digits 10 Rows</option>
+-->
+                   </select>
+                   <input style="background-color:#ffae19; outline-style:solid; outline-color:#FF3300; outline-width:thick" name="BtnLogin" type="button"  value="START" onclick="callAlert('3')"/>
+                 </form></td>
+                 </tr>
+               <tr>
+                 <td align="center" bgcolor="#F2F2F2">4</td>
+                 <td align="center" bgcolor="#F2F2F2">60 Questions</td>
+                 <td align="center" bgcolor="#F2F2F2">Addition,  Subtraction +, -</td>
+                 <td align="right" bgcolor="#F2F2F2"> <form name="form4" action="op_exam_v.php?type=[|]&no=60&item=4" method="post">
+                   <select name="ques" id="ques" style="width:200px" >
+                     <option value='ADV_PS_1+-2' selected="selected">1 Digit 2 Rows</option>
+                     <option value='ADV_PS_1+-3'>1 Digit 3 Rows</option>
+                     <option value='ADV_PS_1+-4'>1 Digit 4 Rows</option>
+                     <option value='ADV_PS_1+-5'>1 Digit 5 Rows</option>
+                     <option value='ADV_PS_1+-6'>1 Digit 6 Rows</option>
+                     <option value='ADV_PS_1+-7'>1 Digit 7 Rows</option>
+                     <option value='ADV_PS_1+-8'>1 Digit 8 Rows</option>
+                     <option value='ADV_PS_1+-9'>1 Digit 9 Rows</option>
+                     <option value='ADV_PS_1+-10'>1 Digit 10 Rows</option>
+                     <option value='ADV_PS_2+-2'>2 Digits 2 Rows</option>
+                     <option value='ADV_PS_2+-3'>2 Digits 3 Rows</option>
+                     <option value='ADV_PS_2+-4'>2 Digits 4 Rows</option>
+                     <option value='ADV_PS_2+-5'>2 Digits 5 Rows</option>
+                     <option value='ADV_PS_2+-6'>2 Digits 6 Rows</option>
+                     <option value='ADV_PS_2+-7'>2 Digits 7 Rows</option>
+                     <option value='ADV_PS_2+-8'>2 Digits 8 Rows</option>
+                     <option value='ADV_PS_2+-9'>2 Digits 9 Rows</option>
+                     <option value='ADV_PS_2+-10'>2 Digits 10 Rows</option>
+                     <option value='ADV_PS_3+-2'>3 Digits 2 Rows</option>
+                     <option value='ADV_PS_3+-3'>3 Digits 3 Rows</option>
+                     <option value='ADV_PS_3+-4'>3 Digits 4 Rows</option>
+                     <option value='ADV_PS_3+-5'>3 Digits 5 Rows</option>
+                     <option value='ADV_PS_3+-6'>3 Digits 6 Rows</option>
+                     <option value='ADV_PS_3+-7'>3 Digits 7 Rows</option>
+                     <option value='ADV_PS_3+-8'>3 Digits 8 Rows</option>
+                     <option value='ADV_PS_3+-9'>3 Digits 9 Rows</option>
+                     <option value='ADV_PS_3+-10'>3 Digits 10 Rows</option>
+                     <option value='ADV_PS_4+-2'>4 Digits 2 Rows</option>
+                     <option value='ADV_PS_4+-3'>4 Digits 3 Rows</option>
+                     <option value='ADV_PS_4+-4'>4 Digits 4 Rows</option>
+                     <option value='ADV_PS_4+-5'>4 Digits 5 Rows</option>
+                     <option value='ADV_PS_4+-6'>4 Digits 6 Rows</option>
+                     <option value='ADV_PS_4+-7'>4 Digits 7 Rows</option>
+                     <option value='ADV_PS_4+-8'>4 Digits 8 Rows</option>
+                     <option value='ADV_PS_4+-9'>4 Digits 9 Rows</option>
+                     <option value='ADV_PS_4+-10'>4 Digits 10 Rows</option>
+                     <option value='ADV_PS_5+-2'>5 Digits 2 Rows</option>
+                     <option value='ADV_PS_5+-3'>5 Digits 3 Rows</option>
+                     <option value='ADV_PS_5+-4'>5 Digits 4 Rows</option>
+                     <option value='ADV_PS_5+-5'>5 Digits 5 Rows</option>
+                     <option value='ADV_PS_5+-6'>5 Digits 6 Rows</option>
+                     <option value='ADV_PS_5+-7'>5 Digits 7 Rows</option>
+                     <option value='ADV_PS_5+-8'>5 Digits 8 Rows</option>
+                     <option value='ADV_PS_5+-9'>5 Digits 9 Rows</option>
+                     <option value='ADV_PS_5+-10'>5 Digits 10 Rows</option>
+                     <option value='ADV_PS_6+-2'>6 Digits 2 Rows</option>
+                     <option value='ADV_PS_6+-3'>6 Digits 3 Rows</option>
+                     <option value='ADV_PS_6+-4'>6 Digits 4 Rows</option>
+                     <option value='ADV_PS_6+-5'>6 Digits 5 Rows</option>
+                     <option value='ADV_PS_6+-6'>6 Digits 6 Rows</option>
+                     <option value='ADV_PS_6+-7'>6 Digits 7 Rows</option>
+                     <option value='ADV_PS_6+-8'>6 Digits 8 Rows</option>
+                     <option value='ADV_PS_6+-9'>6 Digits 9 Rows</option>
+                     <option value='ADV_PS_6+-10'>6 Digits 10 Rows</option>
+                    <!-- 
+ <option value='ADV_PS_7+-2'>7 Digits 2 Rows</option>
+                     <option value='ADV_PS_7+-3'>7 Digits 3 Rows</option>
+                     <option value='ADV_PS_7+-4'>7 Digits 4 Rows</option>
+                     <option value='ADV_PS_7+-5'>7 Digits 5 Rows</option>
+                     <option value='ADV_PS_7+-6'>7 Digits 6 Rows</option>
+                     <option value='ADV_PS_7+-7'>7 Digits 7 Rows</option>
+                     <option value='ADV_PS_7+-8'>7 Digits 8 Rows</option>
+                     <option value='ADV_PS_7+-9'>7 Digits 9 Rows</option>
+                     <option value='ADV_PS_7+-10'>7 Digits 10 Rows</option>
+                     <option value='ADV_PS_8+-2'>8 Digits 2 Rows</option>
+                     <option value='ADV_PS_8+-3'>8 Digits 3 Rows</option>
+                     <option value='ADV_PS_8+-4'>8 Digits 4 Rows</option>
+                     <option value='ADV_PS_8+-5'>8 Digits 5 Rows</option>
+                     <option value='ADV_PS_8+-6'>8 Digits 6 Rows</option>
+                     <option value='ADV_PS_8+-7'>8 Digits 7 Rows</option>
+                     <option value='ADV_PS_8+-8'>8 Digits 8 Rows</option>
+                     <option value='ADV_PS_8+-9'>8 Digits 9 Rows</option>
+                     <option value='ADV_PS_8+-10'>8 Digits 10 Rows</option>
+                     <option value='ADV_PS_9+-2'>9 Digits 2 Rows</option>
+                     <option value='ADV_PS_9+-3'>9 Digits 3 Rows</option>
+                     <option value='ADV_PS_9+-4'>9 Digits 4 Rows</option>
+                     <option value='ADV_PS_9+-5'>9 Digits 5 Rows</option>
+                     <option value='ADV_PS_9+-6'>9 Digits 6 Rows</option>
+                     <option value='ADV_PS_9+-7'>9 Digits 7 Rows</option>
+                     <option value='ADV_PS_9+-8'>9 Digits 8 Rows</option>
+                     <option value='ADV_PS_9+-9'>9 Digits 9 Rows</option>
+                     <option value='ADV_PS_9+-10'>9 Digits 10 Rows</option>
+                     <option value='ADV_PS_10+-2'>10 Digits 2 Rows</option>
+                     <option value='ADV_PS_10+-3'>10 Digits 3 Rows</option>
+                     <option value='ADV_PS_10+-4'>10 Digits 4 Rows</option>
+                     <option value='ADV_PS_10+-5'>10 Digits 5 Rows</option>
+                     <option value='ADV_PS_10+-6'>10 Digits 6 Rows</option>
+                     <option value='ADV_PS_10+-7'>10 Digits 7 Rows</option>
+                     <option value='ADV_PS_10+-8'>10 Digits 8 Rows</option>
+                     <option value='ADV_PS_10+-9'>10 Digits 9 Rows</option>
+                     <option value='ADV_PS_10+-10'>10 Digits 10 Rows</option>
+-->
+                   </select>
+                   <input style="background-color:#ffd699; outline-style:solid; outline-color:#FF3300; outline-width:thick" name="BtnLogin" type="button" id="BtnLogin" value="START" onclick="callAlert('4')"/>
+                 </form></td>
+                 </tr>
+               <tr>
+                 <td align="center" bgcolor="#F2F2F2">5</td>
+                 <td align="center" bgcolor="#F2F2F2">100 Questions</td>
+                 <td align="center" bgcolor="#F2F2F2">Addition,  Subtraction +, -</td>
+                 <td align="right" bgcolor="#F2F2F2"><form name="form5" action="op_exam_v.php?type=[|]&no=100&item=5" method="post">
+                   <select name="ques" id="ques" style="width:200px" >
+                     <option value='ADV_PS_1+-2' selected="selected">1 Digit 2 Rows</option>
+                     <option value='ADV_PS_1+-3'>1 Digit 3 Rows</option>
+                     <option value='ADV_PS_1+-4'>1 Digit 4 Rows</option>
+                     <option value='ADV_PS_1+-5'>1 Digit 5 Rows</option>
+                     <option value='ADV_PS_1+-6'>1 Digit 6 Rows</option>
+                     <option value='ADV_PS_1+-7'>1 Digit 7 Rows</option>
+                     <option value='ADV_PS_1+-8'>1 Digit 8 Rows</option>
+                     <option value='ADV_PS_1+-9'>1 Digit 9 Rows</option>
+                     <option value='ADV_PS_1+-10'>1 Digit 10 Rows</option>
+                     <option value='ADV_PS_2+-2'>2 Digits 2 Rows</option>
+                     <option value='ADV_PS_2+-3'>2 Digits 3 Rows</option>
+                     <option value='ADV_PS_2+-4'>2 Digits 4 Rows</option>
+                     <option value='ADV_PS_2+-5'>2 Digits 5 Rows</option>
+                     <option value='ADV_PS_2+-6'>2 Digits 6 Rows</option>
+                     <option value='ADV_PS_2+-7'>2 Digits 7 Rows</option>
+                     <option value='ADV_PS_2+-8'>2 Digits 8 Rows</option>
+                     <option value='ADV_PS_2+-9'>2 Digits 9 Rows</option>
+                     <option value='ADV_PS_2+-10'>2 Digits 10 Rows</option>
+                     <option value='ADV_PS_3+-2'>3 Digits 2 Rows</option>
+                     <option value='ADV_PS_3+-3'>3 Digits 3 Rows</option>
+                     <option value='ADV_PS_3+-4'>3 Digits 4 Rows</option>
+                     <option value='ADV_PS_3+-5'>3 Digits 5 Rows</option>
+                     <option value='ADV_PS_3+-6'>3 Digits 6 Rows</option>
+                     <option value='ADV_PS_3+-7'>3 Digits 7 Rows</option>
+                     <option value='ADV_PS_3+-8'>3 Digits 8 Rows</option>
+                     <option value='ADV_PS_3+-9'>3 Digits 9 Rows</option>
+                     <option value='ADV_PS_3+-10'>3 Digits 10 Rows</option>
+                     <option value='ADV_PS_4+-2'>4 Digits 2 Rows</option>
+                     <option value='ADV_PS_4+-3'>4 Digits 3 Rows</option>
+                     <option value='ADV_PS_4+-4'>4 Digits 4 Rows</option>
+                     <option value='ADV_PS_4+-5'>4 Digits 5 Rows</option>
+                     <option value='ADV_PS_4+-6'>4 Digits 6 Rows</option>
+                     <option value='ADV_PS_4+-7'>4 Digits 7 Rows</option>
+                     <option value='ADV_PS_4+-8'>4 Digits 8 Rows</option>
+                     <option value='ADV_PS_4+-9'>4 Digits 9 Rows</option>
+                     <option value='ADV_PS_4+-10'>4 Digits 10 Rows</option>
+                     <option value='ADV_PS_5+-2'>5 Digits 2 Rows</option>
+                     <option value='ADV_PS_5+-3'>5 Digits 3 Rows</option>
+                     <option value='ADV_PS_5+-4'>5 Digits 4 Rows</option>
+                     <option value='ADV_PS_5+-5'>5 Digits 5 Rows</option>
+                     <option value='ADV_PS_5+-6'>5 Digits 6 Rows</option>
+                     <option value='ADV_PS_5+-7'>5 Digits 7 Rows</option>
+                     <option value='ADV_PS_5+-8'>5 Digits 8 Rows</option>
+                     <option value='ADV_PS_5+-9'>5 Digits 9 Rows</option>
+                     <option value='ADV_PS_5+-10'>5 Digits 10 Rows</option>
+                     <option value='ADV_PS_6+-2'>6 Digits 2 Rows</option>
+                     <option value='ADV_PS_6+-3'>6 Digits 3 Rows</option>
+                     <option value='ADV_PS_6+-4'>6 Digits 4 Rows</option>
+                     <option value='ADV_PS_6+-5'>6 Digits 5 Rows</option>
+                     <option value='ADV_PS_6+-6'>6 Digits 6 Rows</option>
+                     <option value='ADV_PS_6+-7'>6 Digits 7 Rows</option>
+                     <option value='ADV_PS_6+-8'>6 Digits 8 Rows</option>
+                     <option value='ADV_PS_6+-9'>6 Digits 9 Rows</option>
+                     <option value='ADV_PS_6+-10'>6 Digits 10 Rows</option>
+                    <!-- 
+ <option value='ADV_PS_7+-2'>7 Digits 2 Rows</option>
+                     <option value='ADV_PS_7+-3'>7 Digits 3 Rows</option>
+                     <option value='ADV_PS_7+-4'>7 Digits 4 Rows</option>
+                     <option value='ADV_PS_7+-5'>7 Digits 5 Rows</option>
+                     <option value='ADV_PS_7+-6'>7 Digits 6 Rows</option>
+                     <option value='ADV_PS_7+-7'>7 Digits 7 Rows</option>
+                     <option value='ADV_PS_7+-8'>7 Digits 8 Rows</option>
+                     <option value='ADV_PS_7+-9'>7 Digits 9 Rows</option>
+                     <option value='ADV_PS_7+-10'>7 Digits 10 Rows</option>
+                     <option value='ADV_PS_8+-2'>8 Digits 2 Rows</option>
+                     <option value='ADV_PS_8+-3'>8 Digits 3 Rows</option>
+                     <option value='ADV_PS_8+-4'>8 Digits 4 Rows</option>
+                     <option value='ADV_PS_8+-5'>8 Digits 5 Rows</option>
+                     <option value='ADV_PS_8+-6'>8 Digits 6 Rows</option>
+                     <option value='ADV_PS_8+-7'>8 Digits 7 Rows</option>
+                     <option value='ADV_PS_8+-8'>8 Digits 8 Rows</option>
+                     <option value='ADV_PS_8+-9'>8 Digits 9 Rows</option>
+                     <option value='ADV_PS_8+-10'>8 Digits 10 Rows</option>
+                     <option value='ADV_PS_9+-2'>9 Digits 2 Rows</option>
+                     <option value='ADV_PS_9+-3'>9 Digits 3 Rows</option>
+                     <option value='ADV_PS_9+-4'>9 Digits 4 Rows</option>
+                     <option value='ADV_PS_9+-5'>9 Digits 5 Rows</option>
+                     <option value='ADV_PS_9+-6'>9 Digits 6 Rows</option>
+                     <option value='ADV_PS_9+-7'>9 Digits 7 Rows</option>
+                     <option value='ADV_PS_9+-8'>9 Digits 8 Rows</option>
+                     <option value='ADV_PS_9+-9'>9 Digits 9 Rows</option>
+                     <option value='ADV_PS_9+-10'>9 Digits 10 Rows</option>
+                     <option value='ADV_PS_10+-2'>10 Digits 2 Rows</option>
+                     <option value='ADV_PS_10+-3'>10 Digits 3 Rows</option>
+                     <option value='ADV_PS_10+-4'>10 Digits 4 Rows</option>
+                     <option value='ADV_PS_10+-5'>10 Digits 5 Rows</option>
+                     <option value='ADV_PS_10+-6'>10 Digits 6 Rows</option>
+                     <option value='ADV_PS_10+-7'>10 Digits 7 Rows</option>
+                     <option value='ADV_PS_10+-8'>10 Digits 8 Rows</option>
+                     <option value='ADV_PS_10+-9'>10 Digits 9 Rows</option>
+                     <option value='ADV_PS_10+-10'>10 Digits 10 Rows</option>
+-->
+                     </select>
+                   <input style="background-color:#ffae19; outline-style:solid; outline-color:#FF3300; outline-width:thick" name="BtnLogin" type="button" id="BtnLogin" value="START" onclick="callAlert('5')"/>
+                   </form></td>
+               </tr>
+               <tr>
+                 <td align="center" bgcolor="#F2F2F2">6</td>
+                 <td align="center" bgcolor="#F2F2F2">10 Questions</td>
+                 <td align="center" bgcolor="#F2F2F2">Decimal +, -</td>
+                 <td align="right" bgcolor="#F2F2F2"><form name="form6" action="op_exam_v.php?type=[|]&no=10&item=6" method="post">
+                   <select name="ques" id="ques" style="width:200px" >
+                     <option value='ADV_DECIMAL_PSMD_1+-2' selected="selected">1 Digit 2 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_1+-3'>1 Digit 3 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_1+-4'>1 Digit 4 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_1+-5'>1 Digit 5 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_1+-6'>1 Digit 6 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_1+-7'>1 Digit 7 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_1+-8'>1 Digit 8 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_1+-9'>1 Digit 9 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_1+-10'>1 Digit 10 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_2+-2'>2 Digits 2 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_2+-3'>2 Digits 3 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_2+-4'>2 Digits 4 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_2+-5'>2 Digits 5 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_2+-6'>2 Digits 6 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_2+-7'>2 Digits 7 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_2+-8'>2 Digits 8 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_2+-9'>2 Digits 9 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_2+-10'>2 Digits 10 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_3+-2'>3 Digits 2 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_3+-3'>3 Digits 3 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_3+-4'>3 Digits 4 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_3+-5'>3 Digits 5 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_3+-6'>3 Digits 6 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_3+-7'>3 Digits 7 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_3+-8'>3 Digits 8 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_3+-9'>3 Digits 9 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_3+-10'>3 Digits 10 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_4+-2'>4 Digits 2 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_4+-3'>4 Digits 3 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_4+-4'>4 Digits 4 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_4+-5'>4 Digits 5 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_4+-6'>4 Digits 6 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_4+-7'>4 Digits 7 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_4+-8'>4 Digits 8 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_4+-9'>4 Digits 9 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_4+-10'>4 Digits 10 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_5+-2'>5 Digits 2 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_5+-3'>5 Digits 3 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_5+-4'>5 Digits 4 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_5+-5'>5 Digits 5 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_5+-6'>5 Digits 6 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_5+-7'>5 Digits 7 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_5+-8'>5 Digits 8 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_5+-9'>5 Digits 9 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_5+-10'>5 Digits 10 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_6+-2'>6 Digits 2 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_6+-3'>6 Digits 3 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_6+-4'>6 Digits 4 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_6+-5'>6 Digits 5 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_6+-6'>6 Digits 6 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_6+-7'>6 Digits 7 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_6+-8'>6 Digits 8 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_6+-9'>6 Digits 9 Rows</option>
+                     <option value='ADV_DECIMAL_PSMD_6+-10'>6 Digits 10 Rows</option>
+                     
+                     </select>
+                   <input style="background-color:#ffd699; outline-style:solid; outline-color:#FF3300; outline-width:thick" name="BtnLogin" type="button" id="BtnLogin" value="START" onclick="callAlert('6')"/>
+                   </form></td>
+               </tr>
+               <tr>
+                 <td align="center" bgcolor="#F2F2F2">7</td>
+                 <td align="center" bgcolor="#F2F2F2">10 Questions</td>
+                 <td align="center" bgcolor="#F2F2F2">Decimal x , &#247;</td>
+                 <td align="right" bgcolor="#F2F2F2"><form name="form7" action="op_exam_h.php?no=10&item=7" method="post">
+                   <select name="ques" id="ques" style="width:200px" >
+                     
+                     <option value="ADV_DECIMAL_PSMD_2x1" selected="selected">2 x 1</option>
+                     <option value="ADV_DECIMAL_PSMD_3x1">3 x 1</option>
+                     <option value="ADV_DECIMAL_PSMD_4x1">4 x 1</option>
+                     <option value="ADV_DECIMAL_PSMD_3x2">3 x 2</option>
+                     <option value="ADV_DECIMAL_PSMD_2/1">2 &#247; 1</option>
+                     <option value="ADV_DECIMAL_PSMD_3/1">3 &#247; 1</option>
+                     <option value="ADV_DECIMAL_PSMD_4/1">4 &#247; 1</option>
+                     <option value="ADV_DECIMAL_PSMD_4/2">4 &#247; 2</option>
+                     </select>
+                   <input style="background-color:#ffae19; outline-style:solid; outline-color:#FF3300; outline-width:thick" name="BtnLogin" type="button" id="BtnLogin" value="START" onclick="callAlert('7')"/>
+                   </form></td>
+               </tr>
+               <tr>
+                 <td rowspan="4" align="center" bgcolor="#F2F2F2" style="color:#FF6600"><img src="images/plus_sign-preview.png" alt="plus_sign" width="47" height="40" /> &nbsp;<img src="images/minus_sign-preview.png" alt="minus_sign" width="40" height="40" /><strong><br />
+                   <br />
+                   Level<br />
+(Mental Arithmetic)</strong></td>
+                 <td align="center" bgcolor="#F2F2F2">8</td>
+                 <td align="center" bgcolor="#F2F2F2"> 10 Questions</td>
+                 <td align="center" bgcolor="#F2F2F2">Addition,  Subtraction +, -</td>
+                 <td align="right" bgcolor="#F2F2F2"><form name="form8" action="op_exam_v.php?type=[|]&no=10&item=8" method="post">
+                   <select name="ques" style="width:200px">
+                     <option value='ST_PS_13' selected="selected">Level 1 MA</option>
+                     <option value='ST_PS_12'>Level 2 MA</option>
+                     <option value='ST_PS_11'>Level 3 MA</option>
+                     <option value='ST_PS_10'>Level 4 MA</option>
+                     <option value="ST_PS_8">Level 5 MA</option>
+                     <option value="ST_PS_6">Level 6 MA</option>
+                     <option value="ST_PS_5">Level 7 MA</option>
+                     <option value="ST_PS_4">Level 8 MA</option>
+                     <option value="ST_PS_3">Level 9 MA</option>
+                     <option value="ST_PS_2">Level 10 MA</option>
+                     <option value="ST_PS_1">Super Level MA</option>
+                     </select>
+                   <input style="background-color:#ffd699; outline-style:solid; outline-color:#FF3300; outline-width:thick" name="BtnLogin3" type="button" id="BtnLogin3" value="START" onclick="callAlert('8')"/>
+                   </form></td>
+               </tr>
+               <tr>
+                 <td align="center" bgcolor="#F2F2F2">9</td>
+                 <td align="center" bgcolor="#F2F2F2">30 Questions</td>
+                 <td align="center" bgcolor="#F2F2F2">Addition,  Subtraction +, -</td>
+                 <td align="right" bgcolor="#F2F2F2"><form name="form9" action="op_exam_v.php?type=[|]&no=30&item=9" method="post">
+                   <select name="ques" id="ques" style="width:200px">
+                     <option value='ST_PS_13' selected="selected">Level 1 MA</option>
+                     <option value='ST_PS_12'>Level 2 MA</option>
+                     <option value='ST_PS_11'>Level 3 MA</option>
+                     <option value='ST_PS_10'>Level 4 MA</option>
+                     <option value="ST_PS_8">Level 5 MA</option>
+                     <option value="ST_PS_6">Level 6 MA</option>
+                     <option value="ST_PS_5">Level 7 MA</option>
+                     <option value="ST_PS_4">Level 8 MA</option>
+                     <option value="ST_PS_3">Level 9 MA</option>
+                     <option value="ST_PS_2">Level 10 MA</option>
+                     <option value="ST_PS_1">Super Level MA</option>
+                   </select>
+                   <input style="background-color:#ffae19; outline-style:solid; outline-color:#FF3300; outline-width:thick" name="BtnLogin4" type="button" id="BtnLogin4" value="START" onclick="callAlert('9')"/></form></td>
+               </tr>
+               <tr>
+                 <td align="center" bgcolor="#F2F2F2">10</td>
+                 <td align="center" bgcolor="#F2F2F2">60 Questions</td>
+                 <td align="center" bgcolor="#F2F2F2">Addition,  Subtraction +, -</td>
+                 <td align="right" bgcolor="#F2F2F2"><form name="form10" action="op_exam_v.php?type=[|]&no=60&item=10" method="post">
+                   <select name="ques" id="ques" style="width:200px">
+                     <option value='ST_PS_13' selected="selected">Level 1 MA</option>
+                     <option value='ST_PS_12'>Level 2 MA</option>
+                     <option value='ST_PS_11'>Level 3 MA</option>
+                     <option value='ST_PS_10'>Level 4 MA</option>
+                     <option value="ST_PS_8">Level 5 MA</option>
+                     <option value="ST_PS_6">Level 6 MA</option>
+                     <option value="ST_PS_5">Level 7 MA</option>
+                     <option value="ST_PS_4">Level 8 MA</option>
+                     <option value="ST_PS_3">Level 9 MA</option>
+                     <option value="ST_PS_2">Level 10 MA</option>
+                     <option value="ST_PS_1">Super Level MA</option>
+                   </select>
+                   <input style="background-color:#ffd699; outline-style:solid; outline-color:#FF3300; outline-width:thick" name="BtnLogin5" type="button" id="BtnLogin5" value="START" onclick="callAlert('10')"/></form></td>
+               </tr>
+               <tr>
+                 <td align="center" bgcolor="#F2F2F2">11</td>
+                 <td align="center" bgcolor="#F2F2F2">100 Questions</td>
+                 <td align="center" bgcolor="#F2F2F2">Addition,  Subtraction +, -</td>
+                 <td align="right" bgcolor="#F2F2F2"><form name="form11" action="op_exam_v.php?type=[|]&no=100&item=11" method="post">
+                   <select name="ques" id="ques" style="width:200px">
+                     <option value='ST_PS_13' selected="selected">Level 1 MA</option>
+                     <option value='ST_PS_12'>Level 2 MA</option>
+                     <option value='ST_PS_11'>Level 3 MA</option>
+                     <option value='ST_PS_10'>Level 4 MA</option>
+                     <option value="ST_PS_8">Level 5 MA</option>
+                     <option value="ST_PS_6">Level 6 MA</option>
+                     <option value="ST_PS_5">Level 7 MA</option>
+                     <option value="ST_PS_4">Level 8 MA</option>
+                     <option value="ST_PS_3">Level 9 MA</option>
+                     <option value="ST_PS_2">Level 10 MA</option>
+                     <option value="ST_PS_1">Super Level MA</option>
+                   </select>
+                   <input style="background-color:#ffae19; outline-style:solid; outline-color:#FF3300; outline-width:thick" name="BtnLogin6" type="button" id="BtnLogin6" value="START" onclick="callAlert('11')"/></form></td>
+              </tr>
+               <tr>
+                 <td rowspan="8" align="center" bgcolor="#F2F2F2" style="color:#FF6600"><img src="images/multiply_op-preview.png" alt="multiply" width="33" height="33" />&nbsp; <img src="images/divide_op-preview.png" alt="divide" width="33" height="33" /><br />
+                   <br />
+                   <strong>Multiplication and Division<br />
+(Mental Arithmetic)</strong></td>
+                 <td align="center" bgcolor="#F2F2F2">12</td>
+                 <td align="center" bgcolor="#F2F2F2"> 10 Questions</td>
+                 <td align="center" bgcolor="#F2F2F2">Multiplication x</td>
+                 <td align="right" bgcolor="#F2F2F2"><form name="form12" action="op_exam_h.php?no=10&item=12" method="post">
+                   <select name="ques"  style="width:200px">
+                     <option value='MD_1x1' selected="selected">1 &times; 1&#12288;</option>
+                     <option value='MD_2x1'>2 &times; 1&#12288;</option>
+                     <option value='MD_3x1'>3 &times; 1&#12288;</option>
+                     <option value='MD_4x1'>4 &times; 1&#12288;</option>
+                     <option value='MD_2x2'>2 &times; 2&#12288;</option>
+                     <option value='MD_3x2'>3 &times; 2&#12288;</option>
+                     <option value='MD_4x2'>4 &times; 2&#12288;</option>
+                     <option value='MD_3x3'>3 &times; 3&#12288;</option>
+                     <option value='MD_4x3'>4 &times; 3&#12288;</option>
+                     <option value='MD_5x3'>5 &times; 3&#12288;</option>
+                     <option value='MD_6x3'>6 &times; 3&#12288;</option>
+                     <option value='MD_4x4'>4 &times; 4&#12288;</option>
+                     <option value='MD_5x4'>5 &times; 4&#12288;</option>
+                     <option value='MD_6x4'>6 &times; 4&#12288;</option>
+                     <option value='MD_5x5'>5 &times; 5&#12288;</option>
+                     <option value='MD_6x5'>6 &times; 5&#12288;</option>
+                   </select>
+                   <input style="background-color:#ffd699; outline-style:solid; outline-color:#FF3300; outline-width:thick" name="BtnLogin7" type="button" id="BtnLogin7" value="START" onclick="callAlert('12')"/>
+                 </form></td>
+               </tr>
+               <tr>
+                 <td align="center" bgcolor="#F2F2F2">13</td>
+                 <td align="center" bgcolor="#F2F2F2">30 Questions</td>
+                 <td align="center" bgcolor="#F2F2F2">Multiplication x</td>
+                 <td align="right" bgcolor="#F2F2F2"><form name="form13" action="op_exam_h.php?no=30&item=13" method="post">
+                   <select name="ques"  style="width:200px">
+                     <option value='MD_1x1' selected="selected">1 &times; 1&#12288;</option>
+                     <option value='MD_2x1'>2 &times; 1&#12288;</option>
+                     <option value='MD_3x1'>3 &times; 1&#12288;</option>
+                     <option value='MD_4x1'>4 &times; 1&#12288;</option>
+                     <option value='MD_2x2'>2 &times; 2&#12288;</option>
+                     <option value='MD_3x2'>3 &times; 2&#12288;</option>
+                     <option value='MD_4x2'>4 &times; 2&#12288;</option>
+                     <option value='MD_3x3'>3 &times; 3&#12288;</option>
+                     <option value='MD_4x3'>4 &times; 3&#12288;</option>
+                     <option value='MD_5x3'>5 &times; 3&#12288;</option>
+                     <option value='MD_6x3'>6 &times; 3&#12288;</option>
+                     <option value='MD_4x4'>4 &times; 4&#12288;</option>
+                     <option value='MD_5x4'>5 &times; 4&#12288;</option>
+                     <option value='MD_6x4'>6 &times; 4&#12288;</option>
+                     <option value='MD_5x5'>5 &times; 5&#12288;</option>
+                     <option value='MD_6x5'>6 &times; 5&#12288;</option>
+                   </select>
+                   <input style="background-color:#ffae19; outline-style:solid; outline-color:#FF3300; outline-width:thick" name="BtnLogin7" type="button" id="BtnLogin7" value="START" onclick="callAlert('13')"/>
+                 </form></td>
+               </tr>
+               <tr>
+                 <td align="center" bgcolor="#F2F2F2">14</td>
+                 <td align="center" bgcolor="#F2F2F2">60 Questions</td>
+                 <td align="center" bgcolor="#F2F2F2">Multiplication x</td>
+                 <td align="right" bgcolor="#F2F2F2"><form name="form14" action="op_exam_h.php?no=60&item=14" method="post">
+                   <select name="ques"  style="width:200px">
+                     <option value='MD_1x1' selected="selected">1 &times; 1&#12288;</option>
+                     <option value='MD_2x1'>2 &times; 1&#12288;</option>
+                     <option value='MD_3x1'>3 &times; 1&#12288;</option>
+                     <option value='MD_4x1'>4 &times; 1&#12288;</option>
+                     <option value='MD_2x2'>2 &times; 2&#12288;</option>
+                     <option value='MD_3x2'>3 &times; 2&#12288;</option>
+                     <option value='MD_4x2'>4 &times; 2&#12288;</option>
+                     <option value='MD_3x3'>3 &times; 3&#12288;</option>
+                     <option value='MD_4x3'>4 &times; 3&#12288;</option>
+                     <option value='MD_5x3'>5 &times; 3&#12288;</option>
+                     <option value='MD_6x3'>6 &times; 3&#12288;</option>
+                     <option value='MD_4x4'>4 &times; 4&#12288;</option>
+                     <option value='MD_5x4'>5 &times; 4&#12288;</option>
+                     <option value='MD_6x4'>6 &times; 4&#12288;</option>
+                     <option value='MD_5x5'>5 &times; 5&#12288;</option>
+                     <option value='MD_6x5'>6 &times; 5&#12288;</option>
+                   </select>
+                   <input style="background-color:#ffd699; outline-style:solid; outline-color:#FF3300; outline-width:thick" name="BtnLogin7" type="button" id="BtnLogin7" value="START" onclick="callAlert('14')"/>
+                 </form></td>
+               </tr>
+               <tr>
+                 <td align="center" bgcolor="#F2F2F2">15</td>
+                 <td align="center" bgcolor="#F2F2F2">100 Questions</td>
+                 <td align="center" bgcolor="#F2F2F2">Multiplication x</td>
+                 <td align="right" bgcolor="#F2F2F2"><form name="form15" action="op_exam_h.php?no=100&item=15" method="post">
+                   <select name="ques"  style="width:200px">
+                     <option value='MD_1x1' selected="selected">1 &times; 1&#12288;</option>
+                     <option value='MD_2x1'>2 &times; 1&#12288;</option>
+                     <option value='MD_3x1'>3 &times; 1&#12288;</option>
+                     <option value='MD_4x1'>4 &times; 1&#12288;</option>
+                     <option value='MD_2x2'>2 &times; 2&#12288;</option>
+                     <option value='MD_3x2'>3 &times; 2&#12288;</option>
+                     <option value='MD_4x2'>4 &times; 2&#12288;</option>
+                     <option value='MD_3x3'>3 &times; 3&#12288;</option>
+                     <option value='MD_4x3'>4 &times; 3&#12288;</option>
+                     <option value='MD_5x3'>5 &times; 3&#12288;</option>
+                     <option value='MD_6x3'>6 &times; 3&#12288;</option>
+                     <option value='MD_4x4'>4 &times; 4&#12288;</option>
+                     <option value='MD_5x4'>5 &times; 4&#12288;</option>
+                     <option value='MD_6x4'>6 &times; 4&#12288;</option>
+                     <option value='MD_5x5'>5 &times; 5&#12288;</option>
+                     <option value='MD_6x5'>6 &times; 5&#12288;</option>
+                   </select>
+                   <input style="background-color:#ffae19; outline-style:solid; outline-color:#FF3300; outline-width:thick" name="BtnLogin7" type="button" id="BtnLogin7" value="START" onclick="callAlert('15')"/>
+                 </form></td>
+               </tr>
+               <tr>
+                 <td align="center" bgcolor="#F2F2F2">16</td>
+                 <td align="center" bgcolor="#F2F2F2"> 10 Questions</td>
+                 <td align="center" bgcolor="#F2F2F2">Division &#247;</td>
+                 <td align="right" bgcolor="#F2F2F2"><form name="form16" action="op_exam_h.php?no=10&item=16" method="post">
+                   <select name="ques"  style="width:200px">
+                     <option value='MD_2/1' selected="selected">2 &divide; 1</option>
+                     <option value='MD_3/1'>3 &divide; 1</option>
+                     <option value='MD_4/1'>4 &divide; 1</option>
+                     <option value='MD_5/1'>5 &divide; 1</option>
+                     <option value='MD_3/2'>3 &divide; 2</option>
+                     <option value='MD_4/2'>4 &divide; 2</option>
+                     <option value='MD_4/3'>4 &divide; 3</option>
+                     <option value='MD_5/2'>5 &divide; 2</option>
+                     <option value='MD_5/3'>5 &divide; 3</option>
+                     <option value='MD_6/3'>6 &divide; 3</option>
+                     <option value='MD_6/4'>6 &divide; 4</option>
+                     <option value='MD_7/4'>7 &divide; 4</option>
+                     <option value='MD_8/5'>8 &divide; 5</option>
+                     <option value='MD_9/5'>9 &divide; 5</option>
+                     <option value='MD_10/5'>10 &divide; 5</option>
+                   </select>
+                   <input style="background-color:#ffd699; outline-style:solid; outline-color:#FF3300; outline-width:thick" name="BtnLogin9" type="button" id="BtnLogin9" value="START" onclick="callAlert('16')"/>
+                 </form></td>
+               </tr>
+               <tr>
+
+                 <td align="center" bgcolor="#F2F2F2">17</td>
+                 <td align="center" bgcolor="#F2F2F2">30 Questions</td>
+                 <td align="center" bgcolor="#F2F2F2">Division &#247;</td>
+                 <td align="right" bgcolor="#F2F2F2"><form name="form17" action="op_exam_h.php?no=30&item=17" method="post">
+                   <select name="ques"  style="width:200px">
+                     <option value='MD_2/1' selected="selected">2 &divide; 1</option>
+                     <option value='MD_3/1'>3 &divide; 1</option>
+                     <option value='MD_4/1'>4 &divide; 1</option>
+                     <option value='MD_5/1'>5 &divide; 1</option>
+                     <option value='MD_3/2'>3 &divide; 2</option>
+                     <option value='MD_4/2'>4 &divide; 2</option>
+                     <option value='MD_4/23'>4 &divide; 3</option>
+                     <option value='MD_5/2'>5 &divide; 2</option>
+                     <option value='MD_5/3'>5 &divide; 3</option>
+                     <option value='MD_6/3'>6 &divide; 3</option>
+                     <option value='MD_6/4'>6 &divide; 4</option>
+                     <option value='MD_7/4'>7 &divide; 4</option>
+                     <option value='MD_8/5'>8 &divide; 5</option>
+                     <option value='MD_9/5'>9 &divide; 5</option>
+                     <option value='MD_10/5'>10 &divide; 5</option>
+                   </select>
+                   <input style="background-color:#ffae19; outline-style:solid; outline-color:#FF3300; outline-width:thick" name="BtnLogin9" type="button" id="BtnLogin9" value="START" onclick="callAlert('17')"/>
+                 </form></td>
+               </tr>
+               <tr>
+                 <td align="center" bgcolor="#F2F2F2">18</td>
+                 <td align="center" bgcolor="#F2F2F2">60 Questions</td>
+                 <td align="center" bgcolor="#F2F2F2">Division &#247;</td>
+                 <td align="right" bgcolor="#F2F2F2"><form name="form18" action="op_exam_h.php?no=60&item=18" method="post">
+                   <select name="ques" style="width:200px">
+                     <option value='MD_2/1' selected="selected">2 &divide; 1</option>
+                     <option value='MD_3/1'>3 &divide; 1</option>
+                     <option value='MD_4/1'>4 &divide; 1</option>
+                     <option value='MD_5/1'>5 &divide; 1</option>
+                     <option value='MD_3/2'>3 &divide; 2</option>
+                     <option value='MD_4/2'>4 &divide; 2</option>
+                     <option value='MD_4/23'>4 &divide; 3</option>
+                     <option value='MD_5/2'>5 &divide; 2</option>
+                     <option value='MD_5/3'>5 &divide; 3</option>
+                     <option value='MD_6/3'>6 &divide; 3</option>
+                     <option value='MD_6/4'>6 &divide; 4</option>
+                     <option value='MD_7/4'>7 &divide; 4</option>
+                     <option value='MD_8/5'>8 &divide; 5</option>
+                     <option value='MD_9/5'>9 &divide; 5</option>
+                     <option value='MD_10/5'>10 &divide; 5</option>
+                   </select>
+                   <input style="background-color:#ffd699; outline-style:solid; outline-color:#FF3300; outline-width:thick" name="BtnLogin9" type="button" id="BtnLogin9" value="START" onclick="callAlert('18')"/>
+                 </form></td>
+               </tr>
+               <tr>
+                 <td align="center" bgcolor="#F2F2F2">19</td>
+                 <td align="center" bgcolor="#F2F2F2">100 Questions</td>
+                 <td align="center" bgcolor="#F2F2F2">Division &#247;</td>
+                 <td align="right" bgcolor="#F2F2F2"><form name="form19" action="op_exam_h.php?no=100&item=19" method="post">
+                   <select name="ques"  style="width:200px">
+                     <option value='MD_2/1' selected="selected">2 &divide; 1</option>
+                     <option value='MD_3/1'>3 &divide; 1</option>
+                     <option value='MD_4/1'>4 &divide; 1</option>
+                     <option value='MD_5/1'>5 &divide; 1</option>
+                     <option value='MD_3/2'>3 &divide; 2</option>
+                     <option value='MD_4/2'>4 &divide; 2</option>
+                     <option value='MD_4/23'>4 &divide; 3</option>
+                     <option value='MD_5/2'>5 &divide; 2</option>
+                     <option value='MD_5/3'>5 &divide; 3</option>
+                     <option value='MD_6/3'>6 &divide; 3</option>
+                     <option value='MD_6/4'>6 &divide; 4</option>
+                     <option value='MD_7/4'>7 &divide; 4</option>
+                     <option value='MD_8/5'>8 &divide; 5</option>
+                     <option value='MD_9/5'>9 &divide; 5</option>
+                     <option value='MD_10/5'>10 &divide; 5</option>
+                     </select>
+                   <input style="background-color:#ffae19; outline-style:solid; outline-color:#FF3300; outline-width:thick" name="BtnLogin9" type="button" id="BtnLogin9" value="START" onclick="callAlert('19')"/>
+                   </form></td>
+               </tr>
+               </table></td>
+           </tr>
+         </table>
+          <p><fieldset>
+			 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+INNOVATE</title>
+<link rel="stylesheet" type="text/css" href="sddm.css" >
+<style type="text/css">
+<!--
+.style1 {
+	color: #FF3300;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body>
+<form  name="form" method="post" action="/online/op_main.php">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><strong>A. Last Month Users Who Scored Highest Numbers From a Single Set of Questions In One Day</strong><br />
+        <table width="900" border="1" cellpadding="5" cellspacing="0" bordercolorlight="#999999" class="TextH1">
+        <tr>
+          <td width="10%" align="center" bgcolor="#FFCC00">Country</td>
+          <td width="39%" height="100" align="center" bgcolor="#FFCC00">Name</td>
+          <td width="12%" align="center" bgcolor="#FFCC00">Numbers</td>
+          <td width="11%" align="center" bgcolor="#FFCC00">Date</td>
+          <td width="21%" align="center" bgcolor="#FFCC00">Principal  </td>
+        <td width="7%" align="center" bgcolor="#FFCC00">Rank</td>
+        </tr>
+		
+						<tr bgcolor="#FFFFFF">
+          <td align="center"><img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=11&year=2023&stid=18299"><font color="blue">Mohammed Srour</a></td>
+          <td align="center"><span class="style1">3,960</span></td>
+          <td align="center">2023-11-		  01</td>
+          <td align="center">Helena Ung</td>
+        <td align="center">1</td>
+		</tr>
+				
+								<tr bgcolor="#FFFFFF">
+          <td align="center"><img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=11&year=2023&stid=18299"><font color="blue">Mohammed Srour</a></td>
+          <td align="center"><span class="style1">3,960</span></td>
+          <td align="center">2023-11-		  02</td>
+          <td align="center">Helena Ung</td>
+        <td align="center">2</td>
+		</tr>
+				
+								<tr bgcolor="#FFFFFF">
+          <td align="center"><img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=11&year=2023&stid=18299"><font color="blue">Mohammed Srour</a></td>
+          <td align="center"><span class="style1">3,960</span></td>
+          <td align="center">2023-11-		  10</td>
+          <td align="center">Helena Ung</td>
+        <td align="center">3</td>
+		</tr>
+				
+				
+		
+		
+		
+        
+        
+
+      </table></td>
+    </tr>
+  </table>
+</form>
 </body>
 </html>
+			 </fieldset>
+          <p><fieldset>
+			 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+INNOVATE</title>
+<link rel="stylesheet" type="text/css" href="sddm.css" >
+<style type="text/css">
+<!--
+.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body>
+<form  name="form" method="post" action="/online/op_main.php">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><strong>B. Last Month Users Who Practised Maximum Times In A Month </strong><br />
+        <table width="900" border="1" cellpadding="5" cellspacing="0" bordercolorlight="#999999" class="TextH1">
+        <tr>
+          <td width="7%" align="center" bgcolor="#FFCC00">Country</td>
+          <td width="37%" height="100" align="center" bgcolor="#FFCC00">Name</td>
+          <td width="9%" align="center" bgcolor="#FFCC00">Numbers</td>
+          <td width="9%" align="center" bgcolor="#FFCC00">Total <br />
+            Questions</td>
+          <td width="7%" align="center" bgcolor="#FFCC00">Times</td>
+          <td width="8%" align="center" bgcolor="#FFCC00">Duration</td>
+          <td width="18%" align="center" bgcolor="#FFCC00">Principal  </td>
+        <td width="5%" align="center" bgcolor="#FFCC00">Rank</td>
+        </tr>
+		
+				
+		<tr bgcolor="#FFFFFF">
+          <td align="center"><img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=11&year=2023&stid=27769"><font color="blue">Erik Huynh</a></td>
+          <td align="center">111,845</td>
+          <td align="center">21,390</td>
+          <td align="center"><span class="style1">495</span></td>
+          <td align="center">19:39:10</td>
+          <td align="center">Helena Ung</td>
+        <td align="center">1</td>
+		</tr>
+				
+						
+		<tr bgcolor="#FFFFFF">
+          <td align="center"><img src=images/my_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=11&year=2023&stid=11433"><font color="blue">Koustubaa A/P Buvaneswaran</a></td>
+          <td align="center">100,740</td>
+          <td align="center">20,660</td>
+          <td align="center"><span class="style1">480</span></td>
+          <td align="center">07:52:32</td>
+          <td align="center">Wilson Ng</td>
+        <td align="center">2</td>
+		</tr>
+				
+						
+		<tr bgcolor="#FFFFFF">
+          <td align="center"><img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=11&year=2023&stid=25166"><font color="blue">Ashlee Tsang</a></td>
+          <td align="center">23,355</td>
+          <td align="center">5,385</td>
+          <td align="center"><span class="style1">372</span></td>
+          <td align="center">05:45:52</td>
+          <td align="center">Helena Ung</td>
+        <td align="center">3</td>
+		</tr>
+				
+				
+		
+		
+		
+        
+        
+
+      </table></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
+			 </fieldset>
+          <p><fieldset>
+			 <strong>C. Last Month Users Who Practised Daily</strong>
+			 <br />
+			 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+INNOVATE</title>
+<link rel="stylesheet" type="text/css" href="sddm.css" >
+</head>
+
+<body>
+<form  name="form" method="post" action="/online/op_main.php">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><table width="900" border="1" cellpadding="5" cellspacing="0" bordercolorlight="#999999" class="TextH1">
+        <tr>
+          <td width="5%" align="center" bgcolor="#FFCC00">Country</td>
+          <td width="37%" height="100" align="center" bgcolor="#FFCC00">Name</td>
+          <td width="6%" align="center" bgcolor="#FFCC00">Numbers</td>
+          <td width="7%" align="center" bgcolor="#FFCC00">Correct <br />
+            Answers </td>
+          <td width="8%" align="center" bgcolor="#FFCC00">Incorrect <br />
+            Answers</td>
+          <td width="7%" align="center" bgcolor="#FFCC00">Total <br />
+            Questions</td>
+          <td width="7%" align="center" bgcolor="#FFCC00">Time Used</td>
+          <td width="11%" align="center" bgcolor="#FFCC00">Principal  </td>
+        </tr>
+		
+								
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/my_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=11&year=2023&stid=11433"><font color="blue">Koustubaa A/P Buvaneswaran</a></td>
+          <td align="center">100,740</td>
+          <td align="center">20,532</td>
+          <td align="center">128</td>
+          <td align="center">20,660</td>
+          <td align="center">07:52:32</td>
+          <td align="center">Wilson Ng</td>
+        </tr>
+												
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=11&year=2023&stid=16216"><font color="blue">Nicholas Xu</a></td>
+          <td align="center">48,576</td>
+          <td align="center">8,955</td>
+          <td align="center">65</td>
+          <td align="center">9,020</td>
+          <td align="center">01:59:30</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+												
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=11&year=2023&stid=16217"><font color="blue">Angelina Xu</a></td>
+          <td align="center">48,539</td>
+          <td align="center">9,060</td>
+          <td align="center">230</td>
+          <td align="center">9,290</td>
+          <td align="center">05:34:10</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+												
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=11&year=2023&stid=20361"><font color="blue">James Tao</a></td>
+          <td align="center">8,505</td>
+          <td align="center">2,150</td>
+          <td align="center">10</td>
+          <td align="center">2,160</td>
+          <td align="center">02:33:40</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+												
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=11&year=2023&stid=23584"><font color="blue">Anjali Meenachisuntharam</a></td>
+          <td align="center">25,121</td>
+          <td align="center">7,294</td>
+          <td align="center">316</td>
+          <td align="center">7,610</td>
+          <td align="center">13:26:11</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+												
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=11&year=2023&stid=24023"><font color="blue">Keray Chen</a></td>
+          <td align="center">14,403</td>
+          <td align="center">6,220</td>
+          <td align="center">95</td>
+          <td align="center">6,315</td>
+          <td align="center">05:10:50</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+												
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=11&year=2023&stid=25166"><font color="blue">Ashlee Tsang</a></td>
+          <td align="center">23,355</td>
+          <td align="center">5,171</td>
+          <td align="center">214</td>
+          <td align="center">5,385</td>
+          <td align="center">05:45:52</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+												
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=11&year=2023&stid=27769"><font color="blue">Erik Huynh</a></td>
+          <td align="center">111,845</td>
+          <td align="center">21,045</td>
+          <td align="center">345</td>
+          <td align="center">21,390</td>
+          <td align="center">19:39:10</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+												
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=11&year=2023&stid=28288"><font color="blue">Julia Nata</a></td>
+          <td align="center">48,235</td>
+          <td align="center">15,402</td>
+          <td align="center">168</td>
+          <td align="center">15,570</td>
+          <td align="center">13:02:23</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+												
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=11&year=2023&stid=28412"><font color="blue">Evangeline Kamili</a></td>
+          <td align="center">10,942</td>
+          <td align="center">4,892</td>
+          <td align="center">63</td>
+          <td align="center">4,955</td>
+          <td align="center">04:19:03</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+												
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=11&year=2023&stid=28415"><font color="blue">Isabelle Kamili</a></td>
+          <td align="center">11,615</td>
+          <td align="center">5,374</td>
+          <td align="center">86</td>
+          <td align="center">5,460</td>
+          <td align="center">07:46:05</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+												
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=11&year=2023&stid=28416"><font color="blue">Olivia Kamili</a></td>
+          <td align="center">12,003</td>
+          <td align="center">5,857</td>
+          <td align="center">148</td>
+          <td align="center">6,005</td>
+          <td align="center">05:22:52</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+												
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=11&year=2023&stid=28578"><font color="blue">Jayden Chow </a></td>
+          <td align="center">61,813</td>
+          <td align="center">12,952</td>
+          <td align="center">373</td>
+          <td align="center">13,325</td>
+          <td align="center">09:07:19</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+												
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=11&year=2023&stid=28592"><font color="blue">Ryan  Wang</a></td>
+          <td align="center">3,794</td>
+          <td align="center">1,049</td>
+          <td align="center">111</td>
+          <td align="center">1,160</td>
+          <td align="center">05:26:54</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+												
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=11&year=2023&stid=29351"><font color="blue">Raymond Nguyen</a></td>
+          <td align="center">65,240</td>
+          <td align="center">13,382</td>
+          <td align="center">243</td>
+          <td align="center">13,625</td>
+          <td align="center">03:28:27</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+						
+		
+		
+		
+        
+        
+
+      </table></td>
+    </tr>
+  </table>
+  </form>
+<p>&nbsp;</p>
+</body>
+</html>
+			   </fieldset>
+          <p><fieldset>
+			 <strong>D. This Month Users Who Practised Daily</strong><br />
+			 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+INNOVATE</title>
+<link rel="stylesheet" type="text/css" href="sddm.css" >
+</head>
+
+<body>
+<form  name="form" method="post" action="/online/op_main.php">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><table width="900" border="1" cellpadding="5" cellspacing="0" bordercolorlight="#999999" class="TextH1">
+        <tr>
+          <td width="8%" align="center" bgcolor="#FFCC00">Country</td>
+          <td width="31%" height="100" align="center" bgcolor="#FFCC00">Name</td>
+          <td width="10%" align="center" bgcolor="#FFCC00">Numbers</td>
+          <td width="11%" align="center" bgcolor="#FFCC00">Correct <br />
+            Answers </td>
+          <td width="11%" align="center" bgcolor="#FFCC00">Incorrect <br />
+            Answers</td>
+          <td width="11%" align="center" bgcolor="#FFCC00">Total <br />
+            Questions</td>
+          <td width="6%" align="center" bgcolor="#FFCC00">Time Used</td>
+          <td width="12%" align="center" bgcolor="#FFCC00">Principal  </td>
+        </tr>
+		
+								
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=12&year=2023&stid=18878"><font color="blue">Elijah Aloria</a></td>
+          <td align="center">170</td>
+          <td align="center">17</td>
+          <td align="center">13</td>
+          <td align="center">30</td>
+          <td align="center">00:13:08</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+												
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=12&year=2023&stid=19901"><font color="blue">Stan Andre Avila</a></td>
+          <td align="center">594</td>
+          <td align="center">99</td>
+          <td align="center">1</td>
+          <td align="center">100</td>
+          <td align="center">00:01:31</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+												
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=12&year=2023&stid=24093"><font color="blue">James Rivera</a></td>
+          <td align="center">80</td>
+          <td align="center">20</td>
+          <td align="center">0</td>
+          <td align="center">20</td>
+          <td align="center">00:01:11</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+												
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=12&year=2023&stid=27769"><font color="blue">Erik Huynh</a></td>
+          <td align="center">2,720</td>
+          <td align="center">457</td>
+          <td align="center">3</td>
+          <td align="center">460</td>
+          <td align="center">00:12:32</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+												
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=12&year=2023&stid=28263"><font color="blue">Daniel Muhammad</a></td>
+          <td align="center">1,174</td>
+          <td align="center">295</td>
+          <td align="center">5</td>
+          <td align="center">300</td>
+          <td align="center">00:07:26</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+												
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=12&year=2023&stid=28288"><font color="blue">Julia Nata</a></td>
+          <td align="center">637</td>
+          <td align="center">209</td>
+          <td align="center">1</td>
+          <td align="center">210</td>
+          <td align="center">00:07:53</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+												
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=12&year=2023&stid=28320"><font color="blue">Candylopez Tautuaa</a></td>
+          <td align="center">198</td>
+          <td align="center">99</td>
+          <td align="center">1</td>
+          <td align="center">100</td>
+          <td align="center">00:03:13</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+												
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=12&year=2023&stid=28549"><font color="blue">Aiden Tran</a></td>
+          <td align="center">16</td>
+          <td align="center">4</td>
+          <td align="center">6</td>
+          <td align="center">10</td>
+          <td align="center">00:02:17</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+												
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=12&year=2023&stid=28999"><font color="blue">Mia TJOAKASI</a></td>
+          <td align="center">388</td>
+          <td align="center">116</td>
+          <td align="center">24</td>
+          <td align="center">140</td>
+          <td align="center">00:08:48</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+												
+				<tr bgcolor="#FFFFFF">
+          <td align="center">
+ <img src=images/au_flag.png width=30></td>
+          <td height="36" align="center"><a href="ranking_monthly_ind.php?month=12&year=2023&stid=29351"><font color="blue">Raymond Nguyen</a></td>
+          <td align="center">2,960</td>
+          <td align="center">584</td>
+          <td align="center">6</td>
+          <td align="center">590</td>
+          <td align="center">00:09:38</td>
+          <td align="center">Helena Ung</td>
+        </tr>
+						
+		
+		
+		
+        
+        
+
+      </table></td>
+    </tr>
+  </table>
+</form>
+<p>&nbsp;</p>
+</body>
+</html>
+			 </fieldset>
+          <p><fieldset>
+			 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+INNOVATE</title>
+<link rel="stylesheet" type="text/css" href="sddm.css" >
+<style type="text/css">
+<!--
+.style1 {	color: #FF0000;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body>
+<form  name="form" method="post" action="/online/op_main.php">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><strong>E. Past World Champion </strong><br />
+        <table width="900" border="1" cellpadding="5" cellspacing="0" bordercolorlight="#999999" class="TextH1">
+        <tr>
+		  <td width="6%" align="center" bgcolor="#FFCC00">Date</td>
+          <td width="8%" align="center" bgcolor="#FFCC00">Country</td>
+          <td width="35%" height="100" align="center" bgcolor="#FFCC00">Name</td>
+          <td width="8%" align="center" bgcolor="#FFCC00">Numbers</td>
+          <td width="9%" align="center" bgcolor="#FFCC00">Total <br />
+            Questions</td>
+          <td width="6%" align="center" bgcolor="#FFCC00">Times</td>
+          <td width="8%" align="center" bgcolor="#FFCC00">Duration</td>
+          <td width="20%" align="center" bgcolor="#FFCC00">Principal  </td>
+        </tr>
+		
+										<tr bgcolor="#FFFFFF">
+					  <td align="center">2023.11</td>
+					  <td align="center">Australia</td>
+					  <td height="36" align="center"><a href="ranking_monthly_ind.php?month=11&year=2023&stid=18299"><font color="blue">Mohammed Srour</a></td>
+					  <td align="center">135,531</td>
+					  <td align="center">20,890</td>
+					  <td align="center">323</td>
+					  <td align="center">10:23:22</td>
+					  <td align="center">Helena Ung</td>
+					</tr>
+					
+															<tr bgcolor="#FFFFFF">
+					  <td align="center">2023.10</td>
+					  <td align="center">Australia</td>
+					  <td height="36" align="center"><a href="ranking_monthly_ind.php?month=10&year=2023&stid=29351"><font color="blue">Raymond Nguyen</a></td>
+					  <td align="center">72,784</td>
+					  <td align="center">18,770</td>
+					  <td align="center">363</td>
+					  <td align="center">05:54:23</td>
+					  <td align="center">Helena Ung</td>
+					</tr>
+					
+															<tr bgcolor="#FFFFFF">
+					  <td align="center">2023.09</td>
+					  <td align="center">Australia</td>
+					  <td height="36" align="center"><a href="ranking_monthly_ind.php?month=09&year=2023&stid=18892"><font color="blue">Eva Galicia</a></td>
+					  <td align="center">60,011</td>
+					  <td align="center">15,000</td>
+					  <td align="center">347</td>
+					  <td align="center">04:56:53</td>
+					  <td align="center">Helena Ung</td>
+					</tr>
+					
+															<tr bgcolor="#FFFFFF">
+					  <td align="center">2023.08</td>
+					  <td align="center">Australia</td>
+					  <td height="36" align="center"><a href="ranking_monthly_ind.php?month=08&year=2023&stid=29351"><font color="blue">Raymond Nguyen</a></td>
+					  <td align="center">74,253</td>
+					  <td align="center">19,070</td>
+					  <td align="center">288</td>
+					  <td align="center">05:44:41</td>
+					  <td align="center">Helena Ung</td>
+					</tr>
+					
+															<tr bgcolor="#FFFFFF">
+					  <td align="center">2023.07</td>
+					  <td align="center">Australia</td>
+					  <td height="36" align="center"><a href="ranking_monthly_ind.php?month=07&year=2023&stid=18299"><font color="blue">Mohammed Srour</a></td>
+					  <td align="center">209,671</td>
+					  <td align="center">26,830</td>
+					  <td align="center">513</td>
+					  <td align="center">21:23:05</td>
+					  <td align="center">Helena Ung</td>
+					</tr>
+					
+															<tr bgcolor="#FFFFFF">
+					  <td align="center">2023.06</td>
+					  <td align="center">Russia</td>
+					  <td height="36" align="center"><a href="ranking_monthly_ind.php?month=06&year=2023&stid=28153"><font color="blue">Yakovlev Timofei</a></td>
+					  <td align="center">84,762</td>
+					  <td align="center">13,390</td>
+					  <td align="center">172</td>
+					  <td align="center">04:15:35</td>
+					  <td align="center">Tatyana Shtein</td>
+					</tr>
+					
+															<tr bgcolor="#FFFFFF">
+					  <td align="center">2023.05</td>
+					  <td align="center">Russia</td>
+					  <td height="36" align="center"><a href="ranking_monthly_ind.php?month=05&year=2023&stid=28153"><font color="blue">Yakovlev Timofei</a></td>
+					  <td align="center">136,160</td>
+					  <td align="center">22,900</td>
+					  <td align="center">295</td>
+					  <td align="center">08:35:13</td>
+					  <td align="center">Tatyana Shtein</td>
+					</tr>
+					
+															<tr bgcolor="#FFFFFF">
+					  <td align="center">2023.04</td>
+					  <td align="center">Russia</td>
+					  <td height="36" align="center"><a href="ranking_monthly_ind.php?month=04&year=2023&stid=28153"><font color="blue">Yakovlev Timofei</a></td>
+					  <td align="center">300,788</td>
+					  <td align="center">46,310</td>
+					  <td align="center">667</td>
+					  <td align="center">32:44:56</td>
+					  <td align="center">Tatyana Shtein</td>
+					</tr>
+					
+															<tr bgcolor="#FFFFFF">
+					  <td align="center">2023.03</td>
+					  <td align="center">Russia</td>
+					  <td height="36" align="center"><a href="ranking_monthly_ind.php?month=03&year=2023&stid=28153"><font color="blue">Yakovlev Timofei</a></td>
+					  <td align="center">188,536</td>
+					  <td align="center">35,785</td>
+					  <td align="center">734</td>
+					  <td align="center">24:00:20</td>
+					  <td align="center">Tatyana Shtein</td>
+					</tr>
+					
+															<tr bgcolor="#FFFFFF">
+					  <td align="center">2023.02</td>
+					  <td align="center">Russia</td>
+					  <td height="36" align="center"><a href="ranking_monthly_ind.php?month=02&year=2023&stid=28153"><font color="blue">Yakovlev Timofei</a></td>
+					  <td align="center">55,555</td>
+					  <td align="center">11,835</td>
+					  <td align="center">242</td>
+					  <td align="center">07:50:51</td>
+					  <td align="center">Tatyana Shtein</td>
+					</tr>
+					
+															<tr bgcolor="#FFFFFF">
+					  <td align="center">2023.01</td>
+					  <td align="center">Russia</td>
+					  <td height="36" align="center"><a href="ranking_monthly_ind.php?month=01&year=2023&stid=28153"><font color="blue">Yakovlev Timofei</a></td>
+					  <td align="center">50,011</td>
+					  <td align="center">9,330</td>
+					  <td align="center">235</td>
+					  <td align="center">10:09:18</td>
+					  <td align="center">Tatyana Shtein</td>
+					</tr>
+					
+															<tr bgcolor="#FFFFFF">
+					  <td align="center">2022.12</td>
+					  <td align="center">Russia</td>
+					  <td height="36" align="center"><a href="ranking_monthly_ind.php?month=12&year=2022&stid=13606"><font color="blue">Baiguzhinov Alexandr</a></td>
+					  <td align="center">132,780</td>
+					  <td align="center">26,340</td>
+					  <td align="center">531</td>
+					  <td align="center">12:16:12</td>
+					  <td align="center">Tatyana Shtein</td>
+					</tr>
+					
+															<tr bgcolor="#FFFFFF">
+					  <td align="center">2022.11</td>
+					  <td align="center">Australia</td>
+					  <td height="36" align="center"><a href="ranking_monthly_ind.php?month=11&year=2022&stid=18299"><font color="blue">Mohammed Srour</a></td>
+					  <td align="center">239,236</td>
+					  <td align="center">9,700</td>
+					  <td align="center">133</td>
+					  <td align="center">38:14:13</td>
+					  <td align="center">Helena Ung</td>
+					</tr>
+					
+															<tr bgcolor="#FFFFFF">
+					  <td align="center">2022.10</td>
+					  <td align="center">Russia</td>
+					  <td height="36" align="center"><a href="ranking_monthly_ind.php?month=10&year=2022&stid=20702"><font color="blue">Subbotin Petr</a></td>
+					  <td align="center">85,386</td>
+					  <td align="center">18,880</td>
+					  <td align="center">411</td>
+					  <td align="center">12:18:36</td>
+					  <td align="center">Tatyana Shtein</td>
+					</tr>
+					
+															<tr bgcolor="#FFFFFF">
+					  <td align="center">2022.09</td>
+					  <td align="center">Australia</td>
+					  <td height="36" align="center"><a href="ranking_monthly_ind.php?month=09&year=2022&stid=18299"><font color="blue">Mohammed Srour</a></td>
+					  <td align="center">230,610</td>
+					  <td align="center">9,080</td>
+					  <td align="center">129</td>
+					  <td align="center">44:42:51</td>
+					  <td align="center">Helena Ung</td>
+					</tr>
+					
+															<tr bgcolor="#FFFFFF">
+					  <td align="center">2022.08</td>
+					  <td align="center">Russia</td>
+					  <td height="36" align="center"><a href="ranking_monthly_ind.php?month=08&year=2022&stid=20702"><font color="blue">Subbotin Petr</a></td>
+					  <td align="center">107,729</td>
+					  <td align="center">23,695</td>
+					  <td align="center">538</td>
+					  <td align="center">09:59:25</td>
+					  <td align="center">Tatyana Shtein</td>
+					</tr>
+					
+															<tr bgcolor="#FFFFFF">
+					  <td align="center">2022.07</td>
+					  <td align="center">Russia</td>
+					  <td height="36" align="center"><a href="ranking_monthly_ind.php?month=07&year=2022&stid=20702"><font color="blue">Subbotin Petr</a></td>
+					  <td align="center">104,032</td>
+					  <td align="center">28,020</td>
+					  <td align="center">566</td>
+					  <td align="center">09:01:34</td>
+					  <td align="center">Tatyana Shtein</td>
+					</tr>
+					
+															<tr bgcolor="#FFFFFF">
+					  <td align="center">2022.06</td>
+					  <td align="center">Russia</td>
+					  <td height="36" align="center"><a href="ranking_monthly_ind.php?month=06&year=2022&stid=20702"><font color="blue">Subbotin Petr</a></td>
+					  <td align="center">127,257</td>
+					  <td align="center">28,285</td>
+					  <td align="center">648</td>
+					  <td align="center">20:11:05</td>
+					  <td align="center">Tatyana Shtein</td>
+					</tr>
+					
+															<tr bgcolor="#FFFFFF">
+					  <td align="center">2022.05</td>
+					  <td align="center">Russia</td>
+					  <td height="36" align="center"><a href="ranking_monthly_ind.php?month=05&year=2022&stid=20702"><font color="blue">Subbotin Petr</a></td>
+					  <td align="center">78,254</td>
+					  <td align="center">18,090</td>
+					  <td align="center">394</td>
+					  <td align="center">06:56:01</td>
+					  <td align="center">Tatyana Shtein</td>
+					</tr>
+					
+															<tr bgcolor="#FFFFFF">
+					  <td align="center">2022.04</td>
+					  <td align="center">Russia</td>
+					  <td height="36" align="center"><a href="ranking_monthly_ind.php?month=04&year=2022&stid=20702"><font color="blue">Subbotin Petr</a></td>
+					  <td align="center">211,215</td>
+					  <td align="center">51,760</td>
+					  <td align="center">1058</td>
+					  <td align="center">26:17:34</td>
+					  <td align="center">Tatyana Shtein</td>
+					</tr>
+					
+									
+		
+				
+		
+		
+		
+		
+		
+        
+        
+
+      </table></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
+			 </fieldset>
+			 <p><fieldset>
+			 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+INNOVATE</title>
+<link rel="stylesheet" type="text/css" href="sddm.css" >
+<style type="text/css">
+<!--
+.style2 {color: #0000FF}
+-->
+</style>
+</head>
+
+<body>
+<strong>F. Last Month's Individual Country Winner</strong><br />
+<table width="900" border="1" cellpadding="5" cellspacing="0" bordercolorlight="#999999" class="TextH1">
+  <tr>
+    <td width="7%" align="center" bgcolor="#FFCC00">Country</td>
+    <td width="37%" height="100" align="center" bgcolor="#FFCC00">Name</td>
+    <td width="9%" align="center" bgcolor="#FFCC00">Numbers</td>
+    <td width="9%" align="center" bgcolor="#FFCC00">Total <br />
+      Questions</td>
+    <td width="7%" align="center" bgcolor="#FFCC00">Times</td>
+    <td width="8%" align="center" bgcolor="#FFCC00">Duration</td>
+    <td width="18%" align="center" bgcolor="#FFCC00">Principal </td>
+    <td width="5%" align="center" bgcolor="#FFCC00">Rank</td>
+  </tr>
+  
+  
+  
+  
+   <tr bgcolor="#FFFFFF">
+    <td align="center"><img src="images/au_flag.png" width="30" /></td>
+    <td height="36" align="center"><a href="http://www.innovate2u.com/online/ranking_monthly_ind.php?month=11&year=2023&stid=18299" class="style2"><font color="blue">Mohammed Srour </font></a></td>
+    <td align="center"> 135,531</td>
+    <td align="center"> 20,890 </td>
+    <td align="center"> 323</td>
+    <td align="center"> 10H23M22S</td>
+    <td align="center"> Michelle Nguyen</td>
+    <td align="center">1</td>
+  </tr>
+  
+  
+  
+  <tr bgcolor="#FFFFFF">
+    <td align="center"><img src="http://innovate2u.com/online/images/my_flag.png" width="30" /></td>
+    <td height="36" align="center"> <a href="http://www.innovate2u.com/online/ranking_monthly_ind.php?month=11&year=2023&stid=11433"><font color="blue">Koustubaa A/P Buvaneswaran</font></a> </td>
+    <td align="center"> 100,740</td>
+    <td align="center"> 20,660</td>
+    <td align="center"> 480</td>
+    <td align="center"> 07H52M32S</td>
+    <td align="center"> Wilson Ng </td>
+    <td align="center">2</td>
+  </tr>
+  
+  
+  
+  
+   <tr bgcolor="#FFFFFF">
+    <td align="center"><img src="images/ru_flag.png" width="30" /></td>
+    <td height="36" align="center"><a href="http://www.innovate2u.com/online/ranking_monthly_ind.php?month=11&year=2023&stid=29015"><font color="blue">Sugak Ilya </font></a></td>
+    <td align="center"> 5,985</td>
+    <td align="center"> 1,985</td>
+    <td align="center"> 49</td>
+    <td align="center"> 01H30M49S</td>
+    <td align="center"> Tatyana Shtein</td>
+    <td align="center">3</td>
+  </tr>
+  
+  
+  
+  
+  <!--
+      
+  <tr bgcolor="#FFFFFF">
+    <td align="center"><img src="http://innovate2u.com/online/images/bn_flag.gif" width="30" /></td>
+    <td height="36" align="center"><a href="http://www.innovate2u.com/online/ranking_monthly_ind.php?month=10&year=2022&stid=23448"><font color="blue">Md Arman Arsyad Bin Md Ali</font></a></td>
+    <td align="center"> 84</td>
+    <td align="center"> 2</td>
+    <td align="center"> 30</td>
+    <td align="center"> 00H02M16S</td>
+    <td align="center"> Goh Kim Kooi </td>
+    <td align="center">4</td>
+  </tr>
+
+    -->
+   
+   
+  
+  
+  
+  
+  <!--
+    <tr bgcolor="#FFFFFF">
+    <td align="center"><img src="http://innovate2u.com/online/images/kh_flag.png" width="30" /></td>
+    <td height="36" align="center"><a href="http://www.innovate2u.com/online/ranking_monthly_ind.php?month=06&year=2019&stid=16200"><font color="blue">Chhoung Lyching</font></a></td>
+    <td align="center"> 73</td>
+    <td align="center"> 45</td>
+    <td align="center"> 2</td>
+    <td align="center"> 00H03M27S</td>
+    <td align="center"> Seng Lang</td>
+    <td align="center">5</td>
+  </tr>
+ -->
+  
+  
+  
+   <!--
+   <tr bgcolor="#FFFFFF">
+    <td align="center"><img src="http://innovate2u.com/online/images/bn_flag.gif" width="30" /></td>
+    <td height="36" align="center"> <a href="http://www.innovate2u.com/online/ranking_monthly_ind.php?month=10&year=2018&stid=11341"><font color="blue">Sek Chanra</font></a> </td>
+    <td align="center"> 84</td>
+    <td align="center"> 30</td>
+    <td align="center"> 1 </td>
+    <td align="center"> 00H15M04S</td>
+    <td align="center"> Sun Ny </td>
+    <td align="center">4</td>
+  </tr>
+   -->
+  
+  
+  
+  
+
+  
+ 
+ 
+
+ 
+ 
+  
+  <!--
+   <tr bgcolor="#FFFFFF">
+    <td align="center"><img src="http://innovate2u.com/online/images/kh_flag.png" width="30" /></td>
+    <td height="36" align="center"> <a href="http://www.innovate2u.com/online/ranking_monthly_ind.php?month=07&year=2018&stid=13087"><font color="blue">Saren Panna Vaddh</font></a> </td>
+    <td align="center"> 1,425</td>
+    <td align="center"> 510</td>
+    <td align="center"> 6 </td>
+    <td align="center"> 00H26M26S</td>
+    <td align="center"> Sun Ny </td>
+    <td align="center">4</td>
+  </tr>
+  -->
+  
+  
+  
+    
+  
+  
+  
+  <!-- <tr bgcolor="#FFFFFF">
+    <td align="center"> <img src="images/kz_flag.png" width="30" /></td>
+    <td height="36" align="center">      <a href="http://www.innovate2u.com/online/ranking_monthly_ind.php?month=10&year=2017&stid=7513"><font color="blue">Amir Turarov</a> </td>
+    <td align="center"> 149,425</td>
+    <td align="center"> 7,950 </td>
+    <td align="center"> 133</td>
+    <td align="center"> 12H33M24S</td>
+    <td align="center"> Daniyar Zhanbekov</td>
+    <td align="center">1</td>
+  </tr>
+  -->
+      
+   
+  
+  
+</table>
+</body>
+</html>
+			 </fieldset> </p>
+			 
+		  </td>
+       </tr>
+    </table>
+   </td>
+  </tr>
+
+</table>
+   <td width="450" class="footer"><table width="950" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td><img src="images/footer.png" width="950" /></td>
+    </tr>
+  </table></td>
+</body>
+</html>
+
+{% for post in posts %}
+
+    <img src="{{ project.image.url }}" width="400">
+    <h1 style="color:red">{{ post.name }}</h1>
+    <h2>{{ post.description }}</h2>
+
+
+{% endfor %}
